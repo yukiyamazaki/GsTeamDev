@@ -11,8 +11,11 @@
   </div>
 
   <div>
+    {{-- ここから資料投稿のテストFORM部分 --}}
     <h2>test1 資料投稿FORM</h2>
-    
+    <form action="">
+      
+    </form>
   </div>
   
 </body>
