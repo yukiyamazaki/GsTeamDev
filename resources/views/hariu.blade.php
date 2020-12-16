@@ -7,7 +7,7 @@
 </head>
 <body>
   <div>
-    <h1>こちらテストページ</h1>
+
   </div>
 
   <div>
