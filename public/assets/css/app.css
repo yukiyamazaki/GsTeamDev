@@ -1,0 +1,35 @@
+body{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    background-color: darkgray;
+}
+
+main{
+    flex: 1;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+h1{
+    color: blue;
+}
+
+footer{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkgray;
+}
