@@ -17,4 +17,46 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/top', function () {
+    return view('top');
+});
+
+
+
+/* Yamazaki TEST */
+Route::get('/test', function(){
+    return view('test');
+});
+/* haryu TEST */
+Route::get('/hariu', function(){
+    return view('hariu');
+});
+/* kazukiti TEST */
+Route::get('/kazukiti', function(){
+    return view('kazukiti');
+});
+/* isii TEST */
+Route::get('/isii', function(){
+    return view('isii');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
