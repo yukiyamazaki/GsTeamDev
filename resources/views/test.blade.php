@@ -38,7 +38,7 @@
                 </th>
                 <th>
                   <div>
-                    <inputname="discription"></inputname=>
+                    <inputn name="discription"></inputn>
                   </div>
                 </th>
               </tr>
