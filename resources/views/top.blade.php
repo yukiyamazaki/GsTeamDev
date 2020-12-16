@@ -7,6 +7,6 @@
 
 <button>Click</button>
 
-<p>テスト変更</p>
+<p>テスト変更2</p>
 
 @endsection
