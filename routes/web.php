@@ -18,23 +18,3 @@ Route::get('/', function () {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Yamazaki TEST */
-Route::get('/test', function(){
-    return view('test');
-});
-
-
