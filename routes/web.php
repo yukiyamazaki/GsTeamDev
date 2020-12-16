@@ -28,8 +28,8 @@ Route::get('/test', function(){
     return view('test');
 });
 /* haryu TEST */
-Route::get('/haryu', function(){
-    return view('haryu');
+Route::get('/hariu', function(){
+    return view('hariu');
 });
 /* kazukiti TEST */
 Route::get('/kazukiti', function(){
