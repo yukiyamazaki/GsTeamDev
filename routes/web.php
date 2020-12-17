@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TestZakiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,9 +29,7 @@ Route::get('/contents', function () {
 
 
 /* Yamazaki TEST */
-Route::get('/test', function(){
-    return view('test');
-});
+Route::get('/test',[TestZakiController::class,'index']);
 /* haryu TEST */
 Route::get('/hariu', function(){
     return view('hariu');
@@ -43,3 +42,4 @@ Route::get('/kazukiti', function(){
 Route::get('/isii', function(){
     return view('isii');
 });
+
