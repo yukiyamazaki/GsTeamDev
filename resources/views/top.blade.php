@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.hp')
 @section('content')
 
 <section class="fv">
