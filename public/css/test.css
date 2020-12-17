@@ -7,11 +7,19 @@ body{
 
 }
 
+h2{
+  font-size: 20px;
+}
+
 .box1{
-  width: 50%;
+  width: 30%;
   border: 1px solid black;
 }
 .box2{
-  width: 50%;
+  width: 30%;
+  border: 1px solid black;
+}
+.box3{
+  width: 30%;
   border: 1px solid black;
 }

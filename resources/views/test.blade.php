@@ -8,7 +8,7 @@
 </head>
 <body>
   <div>
-    <h1>こちらテストページ</h1>
+    <h1>こちら山崎テストページ</h1>
   </div>
 
   <div>
@@ -107,10 +107,17 @@
 
   <div class="content_box">
     <div class="box1">
-      <h2>ここで、テーブルデータを</h2>
+      <h2>新着順で受けから降順に全データを表示</h2>
+      <div>aa</div>
     </div>
     <div class="box2">
-      <h2>ここで、テーブルデータを</h2>
+      <h2>条件でソート機能</h2>
+      <div>aa</div>
+    </div>
+
+    <div class="box3">
+      <h2>条件で検索した機能を、created_atが早いものから降順表示</h2>
+      <div>aa</div>
     </div>
   
   </div>
