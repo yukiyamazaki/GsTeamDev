@@ -12,7 +12,7 @@ class TestZakiController extends Controller
     //
     public function index(){
         //documentテーブルのデータを取得
-        $documents = DB::table('document')
+        $documents = Document::orderby('created_at','desc')
                         ->get();
 
         return view('/test',
@@ -44,13 +44,6 @@ class TestZakiController extends Controller
         $document->school_categroy = $school_categroy;
         $document->subject =$subject;
         $document->grade = $grade;
-        // $document->title = $title->title;
-        // $document->discription = $discription->discription;
-        // $document->file_type = '111';
-        // $document->document_name = '222';
-        // $document->school_category = $school_category->school_category;
-        // $document->subject = $subject->subject;
-        // $document->grade = $grade->grade;
         $document->save();
         return redirect('test');
     }
