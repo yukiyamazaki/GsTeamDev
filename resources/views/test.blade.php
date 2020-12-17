@@ -91,7 +91,7 @@
         <!-- submit button -->
         <div>
           <div >
-            <a id="rgs_btn">
+            <a href="" id="rgs_btn">
               <span>登録に進む</span>
             </a>
           </div> 
