@@ -21,6 +21,10 @@ Route::get('/top', function () {
     return view('top');
 });
 
+Route::get('/contents', function () {
+    return view('contents');
+});
+
 
 
 /* Yamazaki TEST */

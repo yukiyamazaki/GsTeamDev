@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="stylesheet" href="{{ asset('assets/css/destyle.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/hp_top.css') }}">
 </head>
 
 <body>
@@ -65,6 +65,6 @@
 
     </div>
 
-    <script src="{{ asset('assets/js/app.js') }}"></script>
+    <script src="{{ asset('assets/js/hp_top.js') }}"></script>
 </body>
 </html>
