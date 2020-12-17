@@ -22,6 +22,10 @@ Route::get('/top', function () {
     return view('top');
 });
 
+Route::get('/contents', function () {
+    return view('contents');
+});
+
 
 
 /* Yamazaki TEST */
@@ -39,32 +43,3 @@ Route::get('/isii', function(){
     return view('isii');
 });
 
-
-/* Yamazaki TEST_登録作業へ */
-Route::get('/testDocReg', [TestZakiController::class,'testDocReg']);
-/* Yamazaki TEST_登録作業へ */
-Route::get('/testSearch', [TestZakiController::class,'testsearch']);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
