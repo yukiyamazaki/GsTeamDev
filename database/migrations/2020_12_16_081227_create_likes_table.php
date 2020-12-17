@@ -13,12 +13,12 @@ class CreateLikesTable extends Migration
      */
     public function up()
             {
-                Schema::create("like_table", function (Blueprint $table) {
+                Schema::create("like", function (Blueprint $table) {
 
 						$table->bigIncrements('id');
 						$table->integer('like_user_id');
 						$table->integer('like_document_ld');
-
+                        $table->timestamps();
                 });
             }
 

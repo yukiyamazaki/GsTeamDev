@@ -16,21 +16,21 @@ class ContactsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('contact_table')->insert([
+        DB::table('contact')->insert([
             'user_name'=> Str::random(5),
             'user_mail'=> Str::random(10).'@gmail.com',
             'contact_category'=> Str::random(5),
             'contact_content'=> Str::random(10),
             'login_user_id'=>'111',
         ]);
-        DB::table('contact_table')->insert([
+        DB::table('contact')->insert([
             'user_name'=> Str::random(5),
             'user_mail'=> Str::random(10).'@gmail.com',
             'contact_category'=> Str::random(5),
             'contact_content'=> Str::random(10),
             'login_user_id'=>'111',
         ]);
-        DB::table('contact_table')->insert([
+        DB::table('contact')->insert([
             'user_name'=> Str::random(5),
             'user_mail'=> Str::random(10).'@gmail.com',
             'contact_category'=> Str::random(5),

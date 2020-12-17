@@ -16,7 +16,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('user_table')->insert([
+        DB::table('user')->insert([
             'mail'=> Str::random(10).'@gmail.com',
             'lpw'=> Hash::make('lpw'),
             'user_name'=> Str::random(10),
@@ -28,7 +28,7 @@ class UsersTableSeeder extends Seeder
             'introduce'=> Str::random(30),
             'image_name'=>Str::random(10),
         ]);
-        DB::table('user_table')->insert([
+        DB::table('user')->insert([
             'mail'=> Str::random(10).'@gmail.com',
             'lpw'=> Hash::make('lpw'),
             'user_name'=> Str::random(10),
@@ -40,7 +40,7 @@ class UsersTableSeeder extends Seeder
             'introduce'=> Str::random(30),
             'image_name'=>Str::random(10),
         ]);
-        DB::table('user_table')->insert([
+        DB::table('user')->insert([
             'mail'=> Str::random(10).'@gmail.com',
             'lpw'=> Hash::make('lpw'),
             'user_name'=> Str::random(10),
@@ -52,7 +52,7 @@ class UsersTableSeeder extends Seeder
             'introduce'=> Str::random(30),
             'image_name'=>Str::random(10),
         ]);
-        DB::table('user_table')->insert([
+        DB::table('user')->insert([
             'mail'=> Str::random(10).'@gmail.com',
             'lpw'=> Hash::make('lpw'),
             'user_name'=> Str::random(10),

@@ -12,7 +12,7 @@ class DocumentsTableSeeder extends Seeder
 {
     public function run()
     {
-        DB::table('document_table')->insert([
+        DB::table('document')->insert([
             'title' => 'タイトル',
             'discription' => '説明説明説明説明',
             'file_type' => 'pdffff',
@@ -22,7 +22,7 @@ class DocumentsTableSeeder extends Seeder
             'grade' => '1年生',
         ]);
 
-        DB::table('document_table')->insert([
+        DB::table('document')->insert([
             'title' => 'タイトル2',
             'discription' => '説明説明説明説明',
             'file_type' => 'pdffff',
@@ -31,7 +31,7 @@ class DocumentsTableSeeder extends Seeder
             'subject' => '科学',
             'grade' => '1年生',
         ]);
-        DB::table('document_table')->insert([
+        DB::table('document')->insert([
             'title' => 'タイトル',
             'discription' => '説明説明説明説明',
             'file_type' => 'pdffff',
@@ -41,7 +41,7 @@ class DocumentsTableSeeder extends Seeder
             'grade' => '1年生',
         ]);
 
-        DB::table('document_table')->insert([
+        DB::table('document')->insert([
             'title' => 'タイトル2',
             'discription' => '説明説明説明説明',
             'file_type' => 'pdffff',

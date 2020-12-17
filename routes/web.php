@@ -25,10 +25,7 @@ Route::get('/top', function () {
 
 
 /* Yamazaki TEST */
-Route::get('/test', function(){
-    return view('test',[TestZakiController::class,'index']);
-    
-});
+Route::get('/test',[TestZakiController::class,'index']);
 /* haryu TEST */
 Route::get('/hariu', function(){
     return view('hariu');
@@ -42,6 +39,9 @@ Route::get('/isii', function(){
     return view('isii');
 });
 
+
+/* Yamazaki TEST_登録作業へ */
+Route::get('/testDocReg', [TestZakiController::class,'testDocReg']);
 
 
 

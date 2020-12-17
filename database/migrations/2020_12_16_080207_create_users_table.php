@@ -13,7 +13,7 @@ class CreateUsersTable extends Migration
              */
             public function up()
             {
-                Schema::create("user_table", function (Blueprint $table) {
+                Schema::create("user", function (Blueprint $table) {
 
 						$table->bigIncrements('id');
 						$table->string('mail',128);
@@ -25,7 +25,8 @@ class CreateUsersTable extends Migration
 						$table->string('subject',50)->nullable();
 						$table->integer('age')->nullable();
 						$table->string('introduce',255)->nullable();
-						$table->string('image_name',128)->nullable();
+                        $table->string('image_name',128)->nullable();
+                        $table->timestamps();;
 
                 });
             }

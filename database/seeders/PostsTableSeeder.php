@@ -16,19 +16,19 @@ class PostsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('post_table')->insert([
+        DB::table('post')->insert([
             'post_user_id'=> '2',
             'document_id'=> '333',
         ]);
-        DB::table('post_table')->insert([
+        DB::table('post')->insert([
             'post_user_id'=> '33',
             'document_id'=> '333',
         ]);
-        DB::table('post_table')->insert([
+        DB::table('post')->insert([
             'post_user_id'=> '444',
             'document_id'=> '333',
         ]);
-        DB::table('post_table')->insert([
+        DB::table('post')->insert([
             'post_user_id'=> '555',
             'document_id'=> '333',
         ]);
