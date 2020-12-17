@@ -8,6 +8,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="stylesheet" href="{{ asset('assets/css/destyle.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/hp_top.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/contents.css') }}">
 </head>
 
 <body>
