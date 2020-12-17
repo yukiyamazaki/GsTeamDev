@@ -47,5 +47,16 @@ class TestZakiController extends Controller
         $document->save();
         return redirect('test');
     }
+
+    public function testSearch(Request $request){
+        $search_keyword = $request->get('search');
+        $Search_docs = Document::orderby('created_at','desc')
+        ->get();
+                        
+
+        return view('/test',
+            ['Search_docs'=>$Search_docs]);
+        
+    }
     
 }

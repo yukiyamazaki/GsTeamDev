@@ -42,6 +42,8 @@ Route::get('/isii', function(){
 
 /* Yamazaki TEST_登録作業へ */
 Route::get('/testDocReg', [TestZakiController::class,'testDocReg']);
+/* Yamazaki TEST_登録作業へ */
+Route::get('/testSearch', [TestZakiController::class,'testsearch']);
 
 
 

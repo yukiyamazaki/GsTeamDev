@@ -119,14 +119,36 @@
     </div>
     <div class="box2">
       <h2>条件でソート機能</h2>
-      <div>aa</div>
+      <form method="get" action="{{ url('/testSearch')}}" enctype="multipart/form-data">
+      {{ csrf_field() }}
+        <div>
+          <input type="text" name="search">
+        </div>
+        <!-- submit button -->
+        <div>
+          <div>
+            <div>
+              <button type="submit">
+                <span>検索開始</span>
+              </button>
+            </div>
+          </div>
+          <ul>
+            @foreach($documents as $document)
+              <li>{{ $document->title}}<li>
+            @endforeach
+          </ul>
+          </div>   
+        </form>
+      </div>
+      
+      <div class="box3">
+        <h2>条件で検索した機能を、created_atが早いものから降順表示</h2>
+        
+        <div>aa</div>
+      </div>
+      
     </div>
-
-    <div class="box3">
-      <h2>条件で検索した機能を、created_atが早いものから降順表示</h2>
-      <div>aa</div>
-    </div>
-  
   </div>
 </body>
 </html>
