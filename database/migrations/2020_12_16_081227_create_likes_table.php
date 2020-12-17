@@ -29,7 +29,7 @@ class CreateLikesTable extends Migration
              */
             public function down()
             {
-                Schema::dropIfExists("like_table");
+                Schema::dropIfExists("like");
             }
         }
 

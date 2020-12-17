@@ -35,6 +35,6 @@ class CreateDocumentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists("document_table");
+        Schema::dropIfExists("document");
     }
 }

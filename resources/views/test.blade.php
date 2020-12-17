@@ -49,7 +49,7 @@
                 </th>
                 <th>
                   <div>
-                    <input type="text" name="school_category" value=""> 
+                    <input type="text" name="school_categroy" value=""> 
                   </div>
                 </th>
               </tr>
@@ -110,7 +110,12 @@
   <div class="content_box">
     <div class="box1">
       <h2>新着順で受けから降順に全データを表示</h2>
-      <div>aa</div>
+      <ul>
+
+        @foreach($documents as $document)
+        <li>{{ $document->title}}<li>
+          @endforeach
+      </ul>
     </div>
     <div class="box2">
       <h2>条件でソート機能</h2>

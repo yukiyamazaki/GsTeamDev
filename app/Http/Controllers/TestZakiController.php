@@ -3,14 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\document;
+use App\Models\Document;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TestZakiController extends Controller
 {
     //
     public function index(){
-        return view('/test');
+        //documentテーブルのデータを取得
+        $documents = DB::table('document')
+                        ->get();
+
+        return view('/test',
+            ['documents'=>$documents]);
     }
 
     public function testDocReg(Request $request){
@@ -20,7 +26,7 @@ class TestZakiController extends Controller
         $discription = $request->get('discription');
         $file_type = 'file_type';
         $document_name = 'document_name';
-        $school_category = $request->get('school_category');
+        $school_categroy = $request->get('school_categroy');
         $subject = $request->get('subject');
         $grade = $request->get('grade');
 
@@ -30,14 +36,14 @@ class TestZakiController extends Controller
         //2.バリデーションエラー
 
         //3.DBへ登録処理
-        $document = new document;
-        $document->title ='aaa';
-        $document->discription = 'aaa';
-        $document->file_type = '111';
-        $document->document_name = '222';
-        $document->school_categroy = 'aaa';
-        $document->subject ='aaa';
-        $document->grade = 'aaa';
+        $document = new Document;
+        $document->title =$title;
+        $document->discription = $discription;
+        $document->file_type = $file_type;
+        $document->document_name = $document_name;
+        $document->school_categroy = $school_categroy;
+        $document->subject =$subject;
+        $document->grade = $grade;
         // $document->title = $title->title;
         // $document->discription = $discription->discription;
         // $document->file_type = '111';
