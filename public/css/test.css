@@ -1,0 +1,25 @@
+body{
+  background: pink;
+}
+
+.content_box{
+  display: flex;
+
+}
+
+h2{
+  font-size: 20px;
+}
+
+.box1{
+  width: 30%;
+  border: 1px solid black;
+}
+.box2{
+  width: 30%;
+  border: 1px solid black;
+}
+.box3{
+  width: 30%;
+  border: 1px solid black;
+}

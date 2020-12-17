@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ asset('css/test.css') }}">
   <title>こちらテストページ</title>
 </head>
 <body>
   <div>
-    <h1>こちらテストページ</h1>
+    <h1>こちら山崎テストページ</h1>
   </div>
 
   <div>
     {{-- ここから資料投稿のテストFORM部分 --}}
     <h2>test1 資料投稿FORM</h2>
-    <form method="post" enctype="multipart/form-data">
+    <form method="get" action="{{ url('/testDocReg')}}" enctype="multipart/form-data">
       {{ csrf_field() }}
         <h3 >
           <span>資料情報</span>
@@ -38,7 +39,7 @@
                 </th>
                 <th>
                   <div>
-                    <inputn name="discription"></inputn>
+                    <input name="discription"></input>
                   </div>
                 </th>
               </tr>
@@ -48,7 +49,7 @@
                 </th>
                 <th>
                   <div>
-                    <input type="text"name="school_category" value=""> 
+                    <input type="text" name="school_categroy" value=""> 
                   </div>
                 </th>
               </tr>
@@ -90,11 +91,13 @@
           
         <!-- submit button -->
         <div>
-          <div >
-            <a href="" id="rgs_btn">
-              <span>登録に進む</span>
-            </a>
-          </div> 
+        <div>
+          <div>
+            <button type="submit">
+              <span>登録</span>
+            </button>
+          </div>
+        </div>
           <p>
             <a href="">閉店申請はこちら</a>
           </p>
@@ -103,6 +106,49 @@
       
       </form>
   </div>
-  
+
+  <div class="content_box">
+    <div class="box1">
+      <h2>新着順で受けから降順に全データを表示</h2>
+      <ul>
+
+        @foreach($documents as $document)
+        <li>{{ $document->title}}<li>
+          @endforeach
+      </ul>
+    </div>
+    <div class="box2">
+      <h2>条件でソート機能</h2>
+      <form method="get" action="{{ url('/testSearch')}}" enctype="multipart/form-data">
+      {{ csrf_field() }}
+        <div>
+          <input type="text" name="search">
+        </div>
+        <!-- submit button -->
+        <div>
+          <div>
+            <div>
+              <button type="submit">
+                <span>検索開始</span>
+              </button>
+            </div>
+          </div>
+          <ul>
+            @foreach($documents as $document)
+              <li>{{ $document->title}}<li>
+            @endforeach
+          </ul>
+          </div>   
+        </form>
+      </div>
+      
+      <div class="box3">
+        <h2>条件で検索した機能を、created_atが早いものから降順表示</h2>
+        
+        <div>aa</div>
+      </div>
+      
+    </div>
+  </div>
 </body>
 </html>

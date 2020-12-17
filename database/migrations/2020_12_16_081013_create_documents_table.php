@@ -13,7 +13,7 @@ class CreateDocumentsTable extends Migration
      */
     public function up()
     {
-        Schema::create("document_table", function (Blueprint $table) {
+        Schema::create("document", function (Blueprint $table) {
 
                 $table->bigIncrements('id');
                 $table->string('title',128)->nullable();
@@ -23,6 +23,7 @@ class CreateDocumentsTable extends Migration
                 $table->string('school_categroy',128)->nullable();
                 $table->string('subject',128)->nullable();
                 $table->string('grade',128)->nullable();
+                $table->timestamps();
 
         });
     }
@@ -34,6 +35,6 @@ class CreateDocumentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists("document_table");
+        Schema::dropIfExists("document");
     }
 }
