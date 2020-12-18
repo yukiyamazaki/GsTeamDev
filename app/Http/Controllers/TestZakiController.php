@@ -50,13 +50,13 @@ class TestZakiController extends Controller
 
     public function testSearch(Request $request){
         $search_keyword = $request->get('search');
-        echo $search_keyword;
         
-        
-                        
+        $searchFiles = DB::table('document')
+                            ->where('title','like','%'.$search_keyword.'%')
+                            ->get();
 
         return view('/testZaki_result',
-            ['Search_docs'=>$Search_docs]);
+            ['searchFiles'=>$searchFiles]);
         
     }
     

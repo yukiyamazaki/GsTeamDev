@@ -14,6 +14,18 @@
   <div class="boxs">
     <div class="box">
       <h2>検索結果</h2>
+      <ul>
+        @foreach($searchFiles as $searchFile)
+        <li class="searchList">
+          <div>
+          {{ $searchFile->title}}
+          </div>
+          <div>
+          {{ $searchFile->created_at}}
+          </div>
+        </li>
+        @endforeach
+      </ul>
     </div>
     <div class="box">
       <h2>ソート結果</h2>
