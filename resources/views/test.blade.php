@@ -14,13 +14,16 @@
   <div>
     {{-- ここから資料投稿のテストFORM部分 --}}
     <h2>test1 資料投稿FORM</h2>
-    <form method="get" action="{{ url('/testDocReg')}}" enctype="multipart/form-data">
+    <form method="POST" action="{{ url('/testDocReg')}}" enctype="multipart/form-data">
       {{ csrf_field() }}
         <h3 >
           <span>資料情報</span>
         </h3>
         <div>
           <p></p>
+          <div>
+            <input type="file" name="file" id="file">
+          </div>
           <p></p>
           <table>
             <tbody>
@@ -59,7 +62,10 @@
                 </th>
                 <th >
                   <div>
-                    <input type="text" name="subject" value=""> 
+                    <select type="text" name="subject"> 
+                      <option value="科学">科学</option>
+                      <option value="国語">国語</option>
+                    </select>
                   </div>
                 </th>
               </tr>
@@ -75,12 +81,10 @@
               </tr>
               <tr>
                 <th>
-                投稿資料
+                PDF資料の投稿
                 </th>
                 <th >
-                  <div>
-                    <input type="file" name="file1" id="file">
-                  </div>
+                  
                 </th>
               </tr>
               </tbody>
@@ -118,7 +122,7 @@
       </ul>
     </div>
     <div class="box2">
-      <h2>条件でソート機能</h2>
+      <h2>キーワード検索</h2>
       <form method="get" action="{{ url('/testSearch')}}" enctype="multipart/form-data">
       {{ csrf_field() }}
         <div>
@@ -126,26 +130,32 @@
         </div>
         <!-- submit button -->
         <div>
-          <div>
             <div>
-              <button type="submit">
-                <span>検索開始</span>
-              </button>
+              <div>
+                <button type="submit">
+                  <span>検索開始</span>
+                </button>
+              </div>
             </div>
-          </div>
-          <ul>
-            @foreach($documents as $document)
-              <li>{{ $document->title}}<li>
-            @endforeach
-          </ul>
           </div>   
         </form>
       </div>
       
       <div class="box3">
-        <h2>条件で検索した機能を、created_atが早いものから降順表示</h2>
-        
-        <div>aa</div>
+        <h2>ソート検索</h2>
+        <form action="{{url('/sortSearch')}}" method="get">
+        {{ csrf_field() }}
+          <p>
+            <h2>科目選択</h2>
+            <input type="checkbox" name="sort_keyword[]" value='科学'>科学
+            <input type="checkbox" name="sort_keyword[]" value='国語'>国語
+          </p>
+          <div>
+                <button type="submit">
+                  <span>検索開始</span>
+                </button>
+              </div>
+        </form>
       </div>
       
     </div>
