@@ -59,7 +59,10 @@
                 </th>
                 <th >
                   <div>
-                    <input type="text" name="subject" value=""> 
+                    <select type="text" name="subject"> 
+                      <option value="科学">科学</option>
+                      <option value="国語">国語</option>
+                    </select>
                   </div>
                 </th>
               </tr>
@@ -139,8 +142,19 @@
       
       <div class="box3">
         <h2>ソート検索</h2>
-        
-        <div>aa</div>
+        <form action="{{url('/sortSearch')}}" method="get">
+        {{ csrf_field() }}
+          <p>
+            <h2>科目選択</h2>
+            <input type="checkbox" name="sort_keyword[]" value='科学'>科学
+            <input type="checkbox" name="sort_keyword[]" value='国語'>国語
+          </p>
+          <div>
+                <button type="submit">
+                  <span>検索開始</span>
+                </button>
+              </div>
+        </form>
       </div>
       
     </div>

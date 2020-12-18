@@ -59,5 +59,19 @@ class TestZakiController extends Controller
             ['searchFiles'=>$searchFiles]);
         
     }
+
+    public function sortSearch(Request $request){
+        $sort_keyword = $request->get('sort_keyword');
+
+        $sortFiles = DB::table('document')
+                        ->where('subject','=',$sort_keyword)
+                        ->get();
+
+        return view('/testZaki_result',
+            ['sortFiles'=>$sortFiles]);
+
+
+    }
+
     
 }

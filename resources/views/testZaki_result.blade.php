@@ -15,20 +15,36 @@
     <div class="box">
       <h2>検索結果</h2>
       <ul>
-        @foreach($searchFiles as $searchFile)
-        <li class="searchList">
-          <div>
-          {{ $searchFile->title}}
-          </div>
-          <div>
-          {{ $searchFile->created_at}}
-          </div>
-        </li>
-        @endforeach
+        @isset($searchFiles)
+          @foreach($searchFiles as $searchFile)
+          <li class="searchList">
+            <div>
+            {{ $searchFile->title}}
+            </div>
+            <div>
+            {{ $searchFile->created_at}}
+            </div>
+          </li>
+          @endforeach
+        @endisset
       </ul>
     </div>
     <div class="box">
       <h2>ソート結果</h2>
+      <ul>
+        @isset($sortFiles)
+          @foreach($sortFiles as $sortFile)
+          <li class="searchList">
+            <div>
+              {{ $sortFile->title}}
+            </div>
+            <div>
+              {{ $sortFile->created_at}}
+            </div>
+          </li>
+          @endforeach
+        @endisset
+      </ul>
     </div>
   </div>
 </body>
