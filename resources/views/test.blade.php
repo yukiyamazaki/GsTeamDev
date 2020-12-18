@@ -14,13 +14,16 @@
   <div>
     {{-- ここから資料投稿のテストFORM部分 --}}
     <h2>test1 資料投稿FORM</h2>
-    <form method="get" action="{{ url('/testDocReg')}}" enctype="multipart/form-data">
+    <form method="POST" action="{{ url('/testDocReg')}}" enctype="multipart/form-data">
       {{ csrf_field() }}
         <h3 >
           <span>資料情報</span>
         </h3>
         <div>
           <p></p>
+          <div>
+            <input type="file" name="file" id="file">
+          </div>
           <p></p>
           <table>
             <tbody>
@@ -78,12 +81,10 @@
               </tr>
               <tr>
                 <th>
-                投稿資料
+                PDF資料の投稿
                 </th>
                 <th >
-                  <div>
-                    <input type="file" name="file1" id="file">
-                  </div>
+                  
                 </th>
               </tr>
               </tbody>

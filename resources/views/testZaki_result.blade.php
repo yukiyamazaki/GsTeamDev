@@ -11,6 +11,9 @@
     <h1>山崎テスト、結果表示ページ</h1>
     <a href="{{ url('/test')}}">testページへ戻る</a>
   </div>
+  <div>
+    <img src="{{asset('/storage/'.$file_name)}}" alt="" style="width:200px">
+  </div>
   <div class="boxs">
     <div class="box">
       <h2>検索結果</h2>
