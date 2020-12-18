@@ -50,11 +50,12 @@ class TestZakiController extends Controller
 
     public function testSearch(Request $request){
         $search_keyword = $request->get('search');
-        $Search_docs = Document::orderby('created_at','desc')
-        ->get();
+        echo $search_keyword;
+        
+        
                         
 
-        return view('/test',
+        return view('/testZaki_result',
             ['Search_docs'=>$Search_docs]);
         
     }
