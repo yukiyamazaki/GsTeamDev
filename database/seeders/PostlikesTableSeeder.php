@@ -17,16 +17,32 @@ class PostlikesTableSeeder extends Seeder
     public function run()
     {
     DB::table('post_likes')->insert([
-        'post_id'=> '1',
-        'likeid_sum'=> '222',
+        'post_id'=> 1,
+        'likeid_sum'=> 33,
     ]);
     DB::table('post_likes')->insert([
-        'post_id'=> '2',
-        'likeid_sum'=> '111',
+        'post_id'=> 2,
+        'likeid_sum'=> 11,
     ]);
     DB::table('post_likes')->insert([
-        'post_id'=> '3',
-        'likeid_sum'=> '3333',
+        'post_id'=> 3,
+        'likeid_sum'=> 444,
+    ]);
+    DB::table('post_likes')->insert([
+        'post_id'=> 4,
+        'likeid_sum'=> 44,
+    ]);
+    DB::table('post_likes')->insert([
+        'post_id'=> 5,
+        'likeid_sum'=> 4324,
+    ]);
+    DB::table('post_likes')->insert([
+        'post_id'=> 6,
+        'likeid_sum'=> 33,
+    ]);
+    DB::table('post_likes')->insert([
+        'post_id'=> 7,
+        'likeid_sum'=> 888,
     ]);
     }
 }

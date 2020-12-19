@@ -167,17 +167,48 @@
     <div class="box">
       <h2>いいね機能多い順表示</h2>
       <ul>
-        @isset($documents_sums)
-          @foreach($documents_sums as $documents_sum)
+        @isset($fav_1)
           <li class="new_box">
             <div>
-              <h3>{{ $documents_sum->title}}</h3>
+              <h3>{{ $fav_1->title}}</h3>
+              <h3>{{ $fav_1->likeid_sum}}</h3>
               <a href="{{ url('/like')}}">♡</a>
               <a href="{{ url('/unlike')}}">✕</a>
             </div>
           </li>
-            @endforeach
-          @endisset
+          <li class="new_box">
+            <div>
+              <h3>{{ $fav_2->title}}</h3>
+              <h3>{{ $fav_2->likeid_sum}}</h3>
+              <a href="{{ url('/like')}}">♡</a>
+              <a href="{{ url('/unlike')}}">✕</a>
+            </div>
+          </li>
+          <li class="new_box">
+            <div>
+              <h3>{{ $fav_3->title}}</h3>
+              <h3>{{ $fav_3->likeid_sum}}</h3>
+              <a href="{{ url('/like')}}">♡</a>
+              <a href="{{ url('/unlike')}}">✕</a>
+            </div>
+          </li>
+          <li class="new_box">
+            <div>
+              <h3>{{ $fav_4->title}}</h3>
+              <h3>{{ $fav_4->likeid_sum}}</h3>
+              <a href="{{ url('/like')}}">♡</a>
+              <a href="{{ url('/unlike')}}">✕</a>
+            </div>
+          </li>
+          <li class="new_box">
+            <div>
+              <h3>{{ $fav_5->title}}</h3>
+              <h3>{{ $fav_5->likeid_sum}}</h3>
+              <a href="{{ url('/like')}}">♡</a>
+              <a href="{{ url('/unlike')}}">✕</a>
+            </div>
+          </li>
+        @endisset
       </ul>
     </div>
       
