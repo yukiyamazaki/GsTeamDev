@@ -112,7 +112,7 @@
   </div>
 
   <div class="content_box">
-    <div class="box1">
+    <div class="box">
       <h2>新着順で受けから降順に全データを表示</h2>
       <ul>
         @isset($documents)
@@ -128,7 +128,7 @@
           @endisset
       </ul>
     </div>
-    <div class="box2">
+    <div class="box">
       <h2>キーワード検索</h2>
       <form method="get" action="{{ url('/testSearch')}}" enctype="multipart/form-data">
       {{ csrf_field() }}
@@ -146,24 +146,28 @@
             </div>
           </div>   
         </form>
-      </div>
+    </div>
       
-      <div class="box3">
-        <h2>ソート検索</h2>
-        <form action="{{url('/sortSearch')}}" method="get">
-        {{ csrf_field() }}
-          <p>
-            <h2>科目選択</h2>
-            <input type="checkbox" name="sort_keyword[]" value='科学'>科学
-            <input type="checkbox" name="sort_keyword[]" value='国語'>国語
-          </p>
-          <div>
-                <button type="submit">
-                  <span>検索開始</span>
-                </button>
-              </div>
-        </form>
-      </div>
+    <div class="box">
+      <h2>ソート検索</h2>
+      <form action="{{url('/sortSearch')}}" method="get">
+      {{ csrf_field() }}
+        <p>
+          <h2>科目選択</h2>
+          <input type="checkbox" name="sort_keyword[]" value='科学'>科学
+          <input type="checkbox" name="sort_keyword[]" value='国語'>国語
+        </p>
+        <div>
+              <button type="submit">
+                <span>検索開始</span>
+              </button>
+            </div>
+      </form>
+    </div>
+    <div class="box">
+      <h2>いいね機能多い順表示</h2>
+        
+    </div>
       
     </div>
   </div>

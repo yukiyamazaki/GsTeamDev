@@ -11,18 +11,11 @@ h2{
   font-size: 20px;
 }
 
-.box1{
-  width: 30%;
+.box{
+  width: 25%;
   border: 1px solid black;
 }
-.box2{
-  width: 30%;
-  border: 1px solid black;
-}
-.box3{
-  width: 30%;
-  border: 1px solid black;
-}
+
 .new_box{
   width: 200px;
   height: 100px;

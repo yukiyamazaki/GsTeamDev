@@ -12,15 +12,20 @@ use Illuminate\Http\UploadedFile;
 
 class TestZakiController extends Controller
 {
-    //
+    // トップページの表示
     public function index(){
         //documentテーブルのデータを取得
-        $documents = Document::orderby('created_at','desc')
-                        ->get();
+        $documents = Document::orderby('created_at','desc')->get();
+
+
+        //いいねが多い順の人気投稿
+
+
 
         return view('/test',
             ['documents'=>$documents]);
     }
+
 
     //投稿登録機能
     public function testDocReg(Request $request){
@@ -84,9 +89,9 @@ class TestZakiController extends Controller
             ['sortFiles'=>$sortFiles]);
     }
 
+
     //Zaki_いいねを追加処理
     public function like(){
-
         //User＆Postのidを取得
         $like_user_id = '1';//ログインユーザーID取得
         $like_document_id = '222';//いいね押した資料ID取得
@@ -99,12 +104,12 @@ class TestZakiController extends Controller
 
         //testページへ戻る
         return view('/test');
-
     }
     
+
+
     //Zaki_いいねを削除する処理
-    public function unlike(){
-        
+    public function unlike(){  
         //UseridとPostidを取得
         $like_user_id = '1';
         $like_document_id = '222';
@@ -114,7 +119,6 @@ class TestZakiController extends Controller
 
          //testページへ戻る
          return view('/test');
-
     }
     
     
