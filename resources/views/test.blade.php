@@ -115,10 +115,17 @@
     <div class="box1">
       <h2>新着順で受けから降順に全データを表示</h2>
       <ul>
-
-        @foreach($documents as $document)
-        <li>{{ $document->title}}<li>
-          @endforeach
+        @isset($documents)
+          @foreach($documents as $document)
+          <li class="new_box">
+            <div>
+              <h3>{{ $document->title}}</h3>
+              <a href="{{ url('/like')}}">♡</a>
+              <a href="{{ url('/unlike')}}">✕</a>
+            </div>
+          </li>
+            @endforeach
+          @endisset
       </ul>
     </div>
     <div class="box2">

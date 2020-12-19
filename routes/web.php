@@ -51,6 +51,13 @@ Route::get('/testSearch', [TestZakiController::class,'testsearch']);
 /* Yamazaki TEST_ソート機能 */
 Route::get('/sortSearch', [TestZakiController::class,'sortSearch']);
 
+//Zaki_いいねを追加処理
+Route::get('/like',[TestZakiController::class,'like']);
+
+//Zaki_いいねを削除する処理
+Route::get('/unlike',[TestZakiController::class,'unlike']);
+
+
 
 
 

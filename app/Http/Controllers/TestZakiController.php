@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Document;
+use App\Models\like;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Storage;
@@ -21,6 +22,7 @@ class TestZakiController extends Controller
             ['documents'=>$documents]);
     }
 
+    //投稿登録機能
     public function testDocReg(Request $request){
 
         //$filePath = $request->file('file')->store('/files','public');
@@ -42,7 +44,7 @@ class TestZakiController extends Controller
 
         //3.DBへ登録処理
         $document = new Document;
-        $document->title =$title;
+        $document->title = $title;
         $document->discription = $discription;
         $document->file_type = $file_type;
         $document->document_name = $document_name;
@@ -57,7 +59,7 @@ class TestZakiController extends Controller
     }
 
 
-
+    //検索機能
     public function testSearch(Request $request){
         $search_keyword = $request->get('search');
         
@@ -70,6 +72,7 @@ class TestZakiController extends Controller
         
     }
 
+    //ソート機能
     public function sortSearch(Request $request){
         $sort_keyword = $request->get('sort_keyword');
 
@@ -79,9 +82,40 @@ class TestZakiController extends Controller
 
         return view('/testZaki_result',
             ['sortFiles'=>$sortFiles]);
-
-
     }
 
+    //Zaki_いいねを追加処理
+    public function like(){
+
+        //User＆Postのidを取得
+        $like_user_id = '1';//ログインユーザーID取得
+        $like_document_id = '222';//いいね押した資料ID取得
+        
+        //取得したidをtableに保存
+        $like = new like;
+        $like->like_user_id = $like_user_id;
+        $like->like_document_id = $like_document_id;
+        $like->save();
+
+        //testページへ戻る
+        return view('/test');
+
+    }
+    
+    //Zaki_いいねを削除する処理
+    public function unlike(){
+        
+        //UseridとPostidを取得
+        $like_user_id = '1';
+        $like_document_id = '222';
+
+        //取得したidからデータを削除
+        DB::table('like')->where('id', '=', 1)->delete();
+
+         //testページへ戻る
+         return view('/test');
+
+    }
+    
     
 }
