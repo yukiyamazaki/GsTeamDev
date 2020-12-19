@@ -29,7 +29,7 @@ class TestZakiController extends Controller
         $fav_5 = $documents_sums[4];
 
         // echo $fav_1;
-        return view('/test',compact('documents','fav_1','fav_2','fav_3','fav_4','fav_5'))
+        return view('/test',compact('documents','fav_1','fav_2','fav_3','fav_4','fav_5'));
     }
 
 
