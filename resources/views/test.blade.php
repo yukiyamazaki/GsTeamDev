@@ -112,16 +112,23 @@
   </div>
 
   <div class="content_box">
-    <div class="box1">
+    <div class="box">
       <h2>新着順で受けから降順に全データを表示</h2>
       <ul>
-
-        @foreach($documents as $document)
-        <li>{{ $document->title}}<li>
-          @endforeach
+        @isset($documents)
+          @foreach($documents as $document)
+          <li class="new_box">
+            <div>
+              <h3>{{ $document->title}}</h3>
+              <a href="{{ url('/like')}}">♡</a>
+              <a href="{{ url('/unlike')}}">✕</a>
+            </div>
+          </li>
+            @endforeach
+          @endisset
       </ul>
     </div>
-    <div class="box2">
+    <div class="box">
       <h2>キーワード検索</h2>
       <form method="get" action="{{ url('/testSearch')}}" enctype="multipart/form-data">
       {{ csrf_field() }}
@@ -139,24 +146,71 @@
             </div>
           </div>   
         </form>
-      </div>
+    </div>
       
-      <div class="box3">
-        <h2>ソート検索</h2>
-        <form action="{{url('/sortSearch')}}" method="get">
-        {{ csrf_field() }}
-          <p>
-            <h2>科目選択</h2>
-            <input type="checkbox" name="sort_keyword[]" value='科学'>科学
-            <input type="checkbox" name="sort_keyword[]" value='国語'>国語
-          </p>
-          <div>
-                <button type="submit">
-                  <span>検索開始</span>
-                </button>
-              </div>
-        </form>
-      </div>
+    <div class="box">
+      <h2>ソート検索</h2>
+      <form action="{{url('/sortSearch')}}" method="get">
+      {{ csrf_field() }}
+        <p>
+          <h2>科目選択</h2>
+          <input type="checkbox" name="sort_keyword[]" value='科学'>科学
+          <input type="checkbox" name="sort_keyword[]" value='国語'>国語
+        </p>
+        <div>
+              <button type="submit">
+                <span>検索開始</span>
+              </button>
+            </div>
+      </form>
+    </div>
+    <div class="box">
+      <h2>いいね機能多い順表示</h2>
+      <ul>
+        @isset($fav_1)
+          <li class="new_box">
+            <div>
+              <h3>{{ $fav_1->title}}</h3>
+              <h3>{{ $fav_1->likeid_sum}}</h3>
+              <a href="{{ url('/like')}}">♡</a>
+              <a href="{{ url('/unlike')}}">✕</a>
+            </div>
+          </li>
+          <li class="new_box">
+            <div>
+              <h3>{{ $fav_2->title}}</h3>
+              <h3>{{ $fav_2->likeid_sum}}</h3>
+              <a href="{{ url('/like')}}">♡</a>
+              <a href="{{ url('/unlike')}}">✕</a>
+            </div>
+          </li>
+          <li class="new_box">
+            <div>
+              <h3>{{ $fav_3->title}}</h3>
+              <h3>{{ $fav_3->likeid_sum}}</h3>
+              <a href="{{ url('/like')}}">♡</a>
+              <a href="{{ url('/unlike')}}">✕</a>
+            </div>
+          </li>
+          <li class="new_box">
+            <div>
+              <h3>{{ $fav_4->title}}</h3>
+              <h3>{{ $fav_4->likeid_sum}}</h3>
+              <a href="{{ url('/like')}}">♡</a>
+              <a href="{{ url('/unlike')}}">✕</a>
+            </div>
+          </li>
+          <li class="new_box">
+            <div>
+              <h3>{{ $fav_5->title}}</h3>
+              <h3>{{ $fav_5->likeid_sum}}</h3>
+              <a href="{{ url('/like')}}">♡</a>
+              <a href="{{ url('/unlike')}}">✕</a>
+            </div>
+          </li>
+        @endisset
+      </ul>
+    </div>
       
     </div>
   </div>

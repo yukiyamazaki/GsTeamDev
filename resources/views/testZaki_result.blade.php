@@ -12,7 +12,9 @@
     <a href="{{ url('/test')}}">testページへ戻る</a>
   </div>
   <div>
-    <img src="{{asset('/storage/'.$file_name)}}" alt="" style="width:200px">
+    @isset($file_name)
+      <img src="{{asset('/storage/'.$file_name)}}" alt="" style="width:200px">
+    @endisset
   </div>
   <div class="boxs">
     <div class="box">
@@ -34,6 +36,23 @@
     </div>
     <div class="box">
       <h2>ソート結果</h2>
+      <ul>
+        @isset($sortFiles)
+          @foreach($sortFiles as $sortFile)
+          <li class="searchList">
+            <div>
+              {{ $sortFile->title}}
+            </div>
+            <div>
+              {{ $sortFile->created_at}}
+            </div>
+          </li>
+          @endforeach
+        @endisset
+      </ul>
+    </div>
+    <div class="box">
+      <h2>人気記事（いいね機能）</h2>
       <ul>
         @isset($sortFiles)
           @foreach($sortFiles as $sortFile)

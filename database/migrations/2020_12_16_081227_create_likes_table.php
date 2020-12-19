@@ -17,7 +17,7 @@ class CreateLikesTable extends Migration
 
 						$table->bigIncrements('id');
 						$table->integer('like_user_id');
-						$table->integer('like_document_ld');
+						$table->integer('like_document_id');
                         $table->timestamps();
                 });
             }
