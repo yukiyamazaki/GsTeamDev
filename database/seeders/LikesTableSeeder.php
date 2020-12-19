@@ -18,32 +18,32 @@ class LikesTableSeeder extends Seeder
     {
     DB::table('like')->insert([
         'like_user_id'=> '111',
-        'like_document_ld'=> '3331',
+        'like_document_id'=> '3331',
       
     ]);
     DB::table('like')->insert([
         'like_user_id'=> '222',
-        'like_document_ld'=> '3331',
+        'like_document_id'=> '3331',
       
     ]);
     DB::table('like')->insert([
         'like_user_id'=> '333',
-        'like_document_ld'=> '3331',
+        'like_document_id'=> '3331',
       
     ]);
     DB::table('like')->insert([
         'like_user_id'=> '444',
-        'like_document_ld'=> '3331',
+        'like_document_id'=> '3331',
       
     ]);
     DB::table('like')->insert([
         'like_user_id'=> '555',
-        'like_document_ld'=> '3331',
+        'like_document_id'=> '3331',
       
     ]);
     DB::table('like')->insert([
         'like_user_id'=> '666',
-        'like_document_ld'=> '3331',
+        'like_document_id'=> '3331',
       
     ]);
 

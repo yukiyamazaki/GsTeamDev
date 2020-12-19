@@ -166,7 +166,19 @@
     </div>
     <div class="box">
       <h2>いいね機能多い順表示</h2>
-        
+      <ul>
+        @isset($documents_sums)
+          @foreach($documents_sums as $documents_sum)
+          <li class="new_box">
+            <div>
+              <h3>{{ $documents_sum->title}}</h3>
+              <a href="{{ url('/like')}}">♡</a>
+              <a href="{{ url('/unlike')}}">✕</a>
+            </div>
+          </li>
+            @endforeach
+          @endisset
+      </ul>
     </div>
       
     </div>

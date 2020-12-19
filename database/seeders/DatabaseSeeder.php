@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             LikesTableSeeder::class,
             PostsTableSeeder::class,
             ContactsTableSeeder::class,
+            PostlikesTableSeeder::class,
         ]);
     }
 }

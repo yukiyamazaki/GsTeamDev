@@ -18,12 +18,13 @@ class TestZakiController extends Controller
         $documents = Document::orderby('created_at','desc')->get();
 
 
-        //いいねが多い順の人気投稿
+        //いいねが多い順で上位5件のPostを表示
+        $documents_sums = Document::orderby('likeid_sum')->limit(5)->get();
+
+        echo $documents_sums;
 
 
-
-        return view('/test',
-            ['documents'=>$documents]);
+        return view('/test',compact($documents,$documents_sums));
     }
 
 
