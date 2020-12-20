@@ -7,7 +7,7 @@ use App\Http\Controllers\MakerController;
 
 //BL = ログイン前  AL = ログイン後
 //トップページへ
-Route::get('/',[UserController::class, 'top']);
+Route::get('/',[MakerController::class, 'top']);
 
 //Aboutページへ
 Route::get('/about',[UserController::class, 'about']);
@@ -15,11 +15,17 @@ Route::get('/about',[UserController::class, 'about']);
 //User Singup画面へ
 Route::get('/signup',[UserController::class, 'signup']);
 
+//User Singup処理へ
+Route::get('/signup_act',[UserController::class, 'signup_act']);
+
 //User login画面へ
 Route::get('/login',[UserController::class, 'login']);
 
+//User login処理へ
+Route::get('/login_act',[UserController::class, 'login_act']);
+
 //各投稿資料の詳細ページ
-Route::get('/contents',[UserController::class, 'contents']);
+Route::get('/contents',[MakerController::class, 'contents']);
 
 //検索時
 Route::get('/search',[UserController::class, 'search']);

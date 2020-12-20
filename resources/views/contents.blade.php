@@ -2,14 +2,15 @@
 @section('content')
 
 <section class="contents_page">
-
+@isset($document)
     <main class="contents_main">
 
         <p>center</p>
-
+    
         <div id="pdf_wrapper">
+        <p>{{ $document->title}}</p>
             <iframe id="pdf_file" width="600px" height="730px" src="{{ asset('assets/pdf/lab10git.pdf') }}"></iframe>
-            <p>コンテンツ題名コンテンツ題名</p>
+            
             <input type="button" value="shere" id="shere_btn">
             <input type="button" value="like" id="like_btn">
         </div>
@@ -21,18 +22,19 @@
         <p>right</p>
 
         <div class="card-3">
-
+            <a href="{{ url('/contents') }}">aaaa</a>
             <div class="content-img">
                 <img src="{{ asset('assets/img/bg1.jpg') }}" />
             </div>
 
             <div class="content">
-                <h3 class="title">
-                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
-                </h3>
-                <span class="post-day">
-                2020年06月27日
-                </span>
+                
+                    <h3 class="title">
+                        デザイン探しをスマートに。HTML/CSSスニペットまとめ。
+                    </h3>
+                    <span class="post-day">
+                        2020年06月27日
+                    </span>
             </div>
 
         </div>
@@ -116,7 +118,7 @@
         </form>
 
     </div>
-
+@endisset
 </section>
 
 @endsection
