@@ -1,86 +1,68 @@
 @extends('layouts.hp')
 @section('content')
 
-<section class="fv">
+<section class="first_view">
 
-    <h1>針生洋介</h1>
+    <h1></h1>
 
 </section>
 
 <section class="recommend">
 
     <div class="rcmd_title">
-        <h3>RECOMMEND</h3>
+        <h2>ー あなたにオススメの教材 ー</h2>
     </div>
 
-    <div class="card">
+    <div class="card_top_wrapper">
 
-        <div class="l-wrapper_01">
+        <div class="card_top">
 
-            <article class="card_01">
+            <div class="card_top_img">
+                <img src="{{ asset('assets/img/bg1.jpg') }}" />
+            </div>
 
-                <div class="card__header_01">
-                    <p class="card__title_01">サムネイルのタイトル</p>
-                    <figure class="card__thumbnail_01">
-                        <img src="{{ asset('assets/img/test.jpg') }}" alt="サムネイル" class="card__image_01">
-                    </figure>
-                </div>
-
-                <div class="card__body_01">
-                    <p class="card__text2_01">これはカード型のデザインです。これはカード型のデザインです。</p>
-                </div>
-
-                <div class="card__footer_01">
-                    <p class="card__text_01"><a href="#" class="button_01 -compact">この記事を詳しく見る</a></p>
-                </div>
-
-            </article>
+            <div class="card_top_contents">
+                <h3 class="card_top_title">
+                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
+                </h3>
+                <span class="card_top_day">
+                2020年06月27日
+                </span>
+            </div>
 
         </div>
 
-        <div class="l-wrapper_01">
+        <div class="card_top">
 
-            <article class="card_01">
+            <div class="card_top_img">
+                <img src="{{ asset('assets/img/test.jpg') }}" />
+            </div>
 
-                <div class="card__header_01">
-                    <p class="card__title_01">サムネイルのタイトル</p>
-                    <figure class="card__thumbnail_01">
-                        <img src="{{ asset('assets/img/test.jpg') }}" alt="サムネイル" class="card__image_01">
-                    </figure>
-                </div>
-
-                <div class="card__body_01">
-                    <p class="card__text2_01">これはカード型のデザインです。これはカード型のデザインです。</p>
-                </div>
-
-                <div class="card__footer_01">
-                    <p class="card__text_01"><a href="#" class="button_01 -compact">この記事を詳しく見る</a></p>
-                </div>
-
-            </article>
+            <div class="card_top_contents">
+                <h3 class="card_top_title">
+                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
+                </h3>
+                <span class="card_top_day">
+                2020年06月27日
+                </span>
+            </div>
 
         </div>
 
-        <div class="l-wrapper_01">
+        <div class="card_top">
 
-            <article class="card_01">
+            <div class="card_top_img">
+                <img src="{{ asset('assets/img/test1.jpg') }}" />
+            </div>
 
-                <div class="card__header_01">
-                    <p class="card__title_01">サムネイルのタイトル</p>
-                    <figure class="card__thumbnail_01">
-                        <img src="{{ asset('assets/img/test.jpg') }}" alt="サムネイル" class="card__image_01">
-                    </figure>
-                </div>
-
-                <div class="card__body_01">
-                    <p class="card__text2_01">これはカード型のデザインです。これはカード型のデザインです。</p>
-                </div>
-
-                <div class="card__footer_01">
-                    <p class="card__text_01"><a href="#" class="button_01 -compact">この記事を詳しく見る</a></p>
-                </div>
-
-            </article>
+            <div class="card_top_contents">
+                <h3 class="card_top_title">
+                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
+                </h3>
+                <span class="card_top_day">
+                2020年06月27日
+                </span>
+            </div>
 
         </div>
 
@@ -93,78 +75,60 @@
 
     <div class="hot_title">
 
-        <h3>HOT</h3>
+        <h2>ー 人気の教材 ー</h2>
 
     </div>
 
-    <div class="card">
+    <div class="card_top_wrapper">
 
-        <div class="l-wrapper_01">
+        <div class="card_top">
 
-            <article class="card_01">
+            <div class="card_top_img">
+                <img src="{{ asset('assets/img/test.jpg') }}" />
+            </div>
 
-                <div class="card__header_01">
-                    <p class="card__title_01">サムネイルのタイトル</p>
-                    <figure class="card__thumbnail_01">
-                        <img src="{{ asset('assets/img/test.jpg') }}" alt="サムネイル" class="card__image_01">
-                    </figure>
-                </div>
-
-                <div class="card__body_01">
-                    <p class="card__text2_01">これはカード型のデザインです。これはカード型のデザインです。</p>
-                </div>
-
-                <div class="card__footer_01">
-                    <p class="card__text_01"><a href="#" class="button_01 -compact">この記事を詳しく見る</a></p>
-                </div>
-
-            </article>
+            <div class="card_top_contents">
+                <h3 class="card_top_title">
+                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
+                </h3>
+                <span class="card_top_day">
+                2020年06月27日
+                </span>
+            </div>
 
         </div>
 
-        <div class="l-wrapper_01">
+        <div class="card_top">
 
-            <article class="card_01">
+            <div class="card_top_img">
+                <img src="{{ asset('assets/img/test.jpg') }}" />
+            </div>
 
-                <div class="card__header_01">
-                    <p class="card__title_01">サムネイルのタイトル</p>
-                    <figure class="card__thumbnail_01">
-                        <img src="{{ asset('assets/img/test.jpg') }}" alt="サムネイル" class="card__image_01">
-                    </figure>
-                </div>
-
-                <div class="card__body_01">
-                    <p class="card__text2_01">これはカード型のデザインです。これはカード型のデザインです。</p>
-                </div>
-
-                <div class="card__footer_01">
-                    <p class="card__text_01"><a href="#" class="button_01 -compact">この記事を詳しく見る</a></p>
-                </div>
-
-            </article>
+            <div class="card_top_contents">
+                <h3 class="card_top_title">
+                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
+                </h3>
+                <span class="card_top_day">
+                2020年06月27日
+                </span>
+            </div>
 
         </div>
 
-        <div class="l-wrapper_01">
+        <div class="card_top">
 
-            <article class="card_01">
+            <div class="card_top_img">
+                <img src="{{ asset('assets/img/test.jpg') }}" />
+            </div>
 
-                <div class="card__header_01">
-                    <p class="card__title_01">サムネイルのタイトル</p>
-                    <figure class="card__thumbnail_01">
-                        <img src="{{ asset('assets/img/test.jpg') }}" alt="サムネイル" class="card__image_01">
-                    </figure>
-                </div>
-
-                <div class="card__body_01">
-                    <p class="card__text2_01">これはカード型のデザインです。これはカード型のデザインです。</p>
-                </div>
-
-                <div class="card__footer_01">
-                    <p class="card__text_01"><a href="#" class="button_01 -compact">この記事を詳しく見る</a></p>
-                </div>
-
-            </article>
+            <div class="card_top_contents">
+                <h3 class="card_top_title">
+                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
+                </h3>
+                <span class="card_top_day">
+                2020年06月27日
+                </span>
+            </div>
 
         </div>
 
@@ -183,78 +147,60 @@
 
     <div class="new_title">
 
-        <h3>NEW</h3>
+        <h2>ー 新規の教材 ー</h2>
 
     </div>
 
-    <div class="card">
+    <div class="card_top_wrapper">
 
-        <div class="l-wrapper_01">
+        <div class="card_top">
 
-            <article class="card_01">
+            <div class="card_top_img">
+                <img src="{{ asset('assets/img/test.jpg') }}" />
+            </div>
 
-                <div class="card__header_01">
-                    <p class="card__title_01">サムネイルのタイトル</p>
-                    <figure class="card__thumbnail_01">
-                        <img src="{{ asset('assets/img/test.jpg') }}" alt="サムネイル" class="card__image_01">
-                    </figure>
-                </div>
-
-                <div class="card__body_01">
-                    <p class="card__text2_01">これはカード型のデザインです。これはカード型のデザインです。</p>
-                </div>
-
-                <div class="card__footer_01">
-                    <p class="card__text_01"><a href="#" class="button_01 -compact">この記事を詳しく見る</a></p>
-                </div>
-
-            </article>
+            <div class="card_top_contents">
+                <h3 class="card_top_title">
+                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
+                </h3>
+                <span class="card_top_day">
+                2020年06月27日
+                </span>
+            </div>
 
         </div>
 
-        <div class="l-wrapper_01">
+        <div class="card_top">
 
-            <article class="card_01">
+            <div class="card_top_img">
+                <img src="{{ asset('assets/img/test.jpg') }}" />
+            </div>
 
-                <div class="card__header_01">
-                    <p class="card__title_01">サムネイルのタイトル</p>
-                    <figure class="card__thumbnail_01">
-                        <img src="{{ asset('assets/img/test.jpg') }}" alt="サムネイル" class="card__image_01">
-                    </figure>
-                </div>
-
-                <div class="card__body_01">
-                    <p class="card__text2_01">これはカード型のデザインです。これはカード型のデザインです。</p>
-                </div>
-
-                <div class="card__footer_01">
-                    <p class="card__text_01"><a href="#" class="button_01 -compact">この記事を詳しく見る</a></p>
-                </div>
-
-            </article>
+            <div class="card_top_contents">
+                <h3 class="card_top_title">
+                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
+                </h3>
+                <span class="card_top_day">
+                2020年06月27日
+                </span>
+            </div>
 
         </div>
 
-        <div class="l-wrapper_01">
+        <div class="card_top">
 
-            <article class="card_01">
+            <div class="card_top_img">
+                <img src="{{ asset('assets/img/test.jpg') }}" />
+            </div>
 
-                <div class="card__header_01">
-                    <p class="card__title_01">サムネイルのタイトル</p>
-                    <figure class="card__thumbnail_01">
-                        <img src="{{ asset('assets/img/test.jpg') }}" alt="サムネイル" class="card__image_01">
-                    </figure>
-                </div>
-
-                <div class="card__body_01">
-                    <p class="card__text2_01">これはカード型のデザインです。これはカード型のデザインです。</p>
-                </div>
-
-                <div class="card__footer_01">
-                    <p class="card__text_01"><a href="#" class="button_01 -compact">この記事を詳しく見る</a></p>
-                </div>
-
-            </article>
+            <div class="card_top_contents">
+                <h3 class="card_top_title">
+                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
+                </h3>
+                <span class="card_top_day">
+                2020年06月27日
+                </span>
+            </div>
 
         </div>
 
