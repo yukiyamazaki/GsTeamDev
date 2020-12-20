@@ -15,55 +15,52 @@
 
     <div class="card_top_wrapper">
 
-        <div class="card_top">
-
-            <div class="card_top_img">
-                <img src="{{ asset('assets/img/bg1.jpg') }}" />
-            </div>
-
-            <div class="card_top_contents">
-                <h3 class="card_top_title">
-                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
-                </h3>
-                <span class="card_top_day">
-                2020年06月27日
-                </span>
-            </div>
-
+    <div class="card_top">
+            <a href="{{ url('/contents')}}">
+                <div class="card_top_img">
+                    <img src="{{asset('assets/img/test.jpg')}}" />
+                </div>
+                <div class="card_top_contents">
+                    <h3 class="card_top_title">
+                        デザイン探しをスマートに。HTML/CSSスニペットまとめ。
+                    </h3>
+                    <span class="card_top_day">
+                        2020年06月27日
+                    </span>
+                </div>
+            </a>
         </div>
 
         <div class="card_top">
-
-            <div class="card_top_img">
-                <img src="{{ asset('assets/img/test.jpg') }}" />
-            </div>
-
-            <div class="card_top_contents">
-                <h3 class="card_top_title">
-                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
-                </h3>
-                <span class="card_top_day">
-                2020年06月27日
-                </span>
-            </div>
-
+            <a href="{{ url('/contents')}}">
+                <div class="card_top_img">
+                    <img src="{{asset('assets/img/test.jpg')}}" />
+                </div>
+                <div class="card_top_contents">
+                    <h3 class="card_top_title">
+                        デザイン探しをスマートに。HTML/CSSスニペットまとめ。
+                    </h3>
+                    <span class="card_top_day">
+                        2020年06月27日
+                    </span>
+                </div>
+            </a>
         </div>
 
         <div class="card_top">
-
-            <div class="card_top_img">
-                <img src="{{ asset('assets/img/test1.jpg') }}" />
-            </div>
-
-            <div class="card_top_contents">
-                <h3 class="card_top_title">
-                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
-                </h3>
-                <span class="card_top_day">
-                2020年06月27日
-                </span>
-            </div>
-
+            <a href="{{ url('/contents')}}">
+                <div class="card_top_img">
+                    <img src="{{asset('assets/img/test.jpg')}}" />
+                </div>
+                <div class="card_top_contents">
+                    <h3 class="card_top_title">
+                        デザイン探しをスマートに。HTML/CSSスニペットまとめ。
+                    </h3>
+                    <span class="card_top_day">
+                        2020年06月27日
+                    </span>
+                </div>
+            </a>
         </div>
 
     </div>

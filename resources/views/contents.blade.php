@@ -21,18 +21,19 @@
         <p>right</p>
 
         <div class="card-3">
-
+            <a href="{{ url('/contents') }}">aaaa</a>
             <div class="content-img">
                 <img src="{{ asset('assets/img/bg1.jpg') }}" />
             </div>
 
             <div class="content">
-                <h3 class="title">
-                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
-                </h3>
-                <span class="post-day">
-                2020年06月27日
-                </span>
+                
+                    <h3 class="title">
+                        デザイン探しをスマートに。HTML/CSSスニペットまとめ。
+                    </h3>
+                    <span class="post-day">
+                        2020年06月27日
+                    </span>
             </div>
 
         </div>
