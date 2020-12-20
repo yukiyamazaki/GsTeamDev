@@ -2,14 +2,15 @@
 @section('content')
 
 <section class="contents_page">
-
+@isset($document)
     <main class="contents_main">
 
         <p>center</p>
-
+    
         <div id="pdf_wrapper">
+        <p>{{ $document->title}}</p>
             <iframe id="pdf_file" width="600px" height="730px" src="{{ asset('assets/pdf/lab10git.pdf') }}"></iframe>
-            <p>コンテンツ題名コンテンツ題名</p>
+            
             <input type="button" value="shere" id="shere_btn">
             <input type="button" value="like" id="like_btn">
         </div>
@@ -117,7 +118,7 @@
         </form>
 
     </div>
-
+@endisset
 </section>
 
 @endsection

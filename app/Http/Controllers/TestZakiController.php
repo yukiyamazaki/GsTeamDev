@@ -15,7 +15,7 @@ class TestZakiController extends Controller
 {
     // トップページの表示
     public function index(){
-        //documentテーブルのデータを取得
+        //documentテーブルのデータを取得（新着順）
         $documents = Document::orderby('created_at','desc')->get();
 
         //いいねが多い順で上位5件のPostを表示

@@ -15,11 +15,6 @@ use Illuminate\Http\UploadedFile;
 // 主にUserからの命令を処理
 class UserController extends Controller
 {
-  // Topページへの遷移
-  public function top(){
-    return view('top');
-  }
-  
   // aboutページへの遷移
   public function about(){
     return view('about');
@@ -35,14 +30,20 @@ class UserController extends Controller
     return view('login');
   }
   
-  // contents
-  public function contents(){
-    return view('contents');
-  }
-
   // search
-  public function search(){
-    return view('search');
+  public function search(Request $request){
+    // jsで受け取った値を変数へ格納
+    // $all = $request->all();
+    // $keyword = $request->get('keyword'); 
+
+    //キーワードを元に
+    $search_contents = Document::orderby('created_at','desc')->where('title','like','%g%')->get();
+
+    //取得したidを元にdocumentテーブルから資料情報を取得
+    // $document = Document::where($searchid->id,1)->first();
+
+    return view('search',compact('search_contents'));
+
   }
   
   // myPageページへの遷移
