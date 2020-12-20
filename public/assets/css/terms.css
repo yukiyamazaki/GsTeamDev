@@ -1,0 +1,18 @@
+/* ========================================
+    共通
+========================================= */
+
+.rulebody {
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Meiryo, メイリオ, sans-serif;
+  font-size: 14px;
+  color: #222;
+  line-height: 1.8;
+  letter-spacing: 0.2em;
+  margin: 0;
+}
+
+/* 利用規約 */
+.rule_wrapper {
+  width: 70%;
+  margin: 36px auto;
+}

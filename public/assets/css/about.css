@@ -1,0 +1,46 @@
+/* ========================================
+    共通
+========================================= */
+
+.about_body {
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Meiryo, メイリオ, sans-serif;
+  font-size: 14px;
+  color: #222;
+  line-height: 1.8;
+  letter-spacing: 0.2em;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* メインビジュアル（テキストなし写真あり） */
+#main_visual {
+  margin-bottom: 30px;
+}
+
+.about_wrapper {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about_h1 {
+  color: #00A7EA;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.about_h2 {
+  color: #00A7EA;
+  font-size: 24px;
+  margin: 32px 0 24px;
+}
+
+.figure {
+  margin: 24px 0;
+}
+
+.about_h3 {
+  color: #00A7EA;
+  font-size: 24px;
+  margin: 24px 0;
+}
