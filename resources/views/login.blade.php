@@ -65,16 +65,14 @@
                   </h2>
                   <div class="uq-loginForm">
                   --}}
-                    <form action="{{ url('login_act') }}" method="POST" class="c-form">
+                    <form action="{{ url('login_act') }}" method="get" class="c-form">
                     {{ csrf_field() }}
-                    
-
                       <input type="hidden">
                       <dl class="uq-loginForm_set">
                           <dt class="uq-loginForm_key">メールアドレス</dt>
                           <dd class="uq-loginForm_value">
                             <div class="c-formText">
-                              <input type="email" placeholder="例：shisha@suitai.com" name="login_mail">
+                              <input type="email" placeholder="例：sukuhabu@gmail.com" name="login_mail">
                             </div>
                           </dd>
                           <dt class="uq-loginForm_key">パスワード</dt>
@@ -90,7 +88,6 @@
                               <span>ログインする</span>
                             </button>
                           </div>
-    
                         </div>
                         <div class="uq-loginForm_reset">
                           <a href="">パスワードを忘れた場合はこちら</a>
@@ -143,7 +140,7 @@
                   <div class="uq-loginForm">
 
                   <!-- 新規登録form -->
-                    <form action="{{ url('register_act') }}" method="POST" class="c-form">
+                    <form action="{{ url('signup_act') }}" method="get" class="c-form">
                     {{ csrf_field() }}
                       <input type="hidden">
                       <dl class="uq-loginForm_set">
@@ -151,7 +148,7 @@
                      
                         <dd class="uq-loginForm_value">
                           <div class="c-formText">
-                            <input type="email" placeholder="例：shisha@suitai.com" name="register_mail">
+                            <input type="email" placeholder="例：sukuhabu@gmail.com" name="register_mail">
                           </div>
                         </dd>
                         <dt class="uq-loginForm_key">パスワード</dt>
