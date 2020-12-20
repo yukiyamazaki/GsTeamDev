@@ -2,64 +2,45 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestZakiController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\MakerController;
 
 //BL = ログイン前  AL = ログイン後
 //トップページへ
-Route::get('/', function () {
-    return view('top');
-});
+Route::get('/',[UserController::class, 'top']);
 
 //Aboutページへ
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/about',[UserController::class, 'about']);
 
-//User 新規登録画面へ
-Route::get('/signup', function () {
-    return view('signup');
-});
+//User Singup画面へ
+Route::get('/signup',[UserController::class, 'signup']);
+
+//User login画面へ
+Route::get('/login',[UserController::class, 'login']);
 
 //各投稿資料の詳細ページ
-Route::get('contents/{username}/{contents_id}', function () {
-    return view('contents');
-});
+Route::get('/contents',[UserController::class, 'contents']);
 
 //検索時
-Route::get('/search/{keyword}', function () {
-    return view('search/{keyword}');
-});
+Route::get('/search',[UserController::class, 'search']);
 
 //資料投稿ページへ
-Route::get('/upload', function () {
-    return view('upload');
-});
+Route::get('/upload',[MakerController::class, 'upload']);
 
 //マイページへ
-Route::get('myPage/{username}', function () {
-    return view('mypage');
-});
-   
+Route::get('/myPage',[UserController::class, 'mypage']);
+
 //サポートページへ
-Route::get('/suport', function () {
-    return view('suport');
-});
+Route::get('/suport',[UserController::class, 'suport']);
 
 //ログアウトページへ
-Route::get('/logout', function () {
-    return view('logout');
-});
+Route::get('/logout',[UserController::class, 'logout']);
 
 //利用規約へ
-Route::get('/userule', function () {
-    return view('userule');
-});
+Route::get('/userule',[UserController::class, 'userule']);
 
 //コンタクトページへ
-Route::get('/contact', function () {
-    return view('contact');
-});
-
-
+Route::get('/contact',[UserController::class, 'contact']);
 
 
 
