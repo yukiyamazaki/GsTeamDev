@@ -1,0 +1,83 @@
+
+/* ヘッダー（共通のヘッダーと差し替える） */
+.contact_header {
+  width: 100%;
+  height: 80px;
+  background: #00A7EA;;
+  color: #fff;
+}
+
+.form-horizontal {
+  margin: 80px auto;
+  max-width: 920px;
+  justify-content: center;
+}
+
+.form-group {
+  border-top: 1px solid #ddd;
+  padding: 32px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 100px;
+}
+
+.form-group:nth-child(4) {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 48px;
+}
+
+.form-group p {
+  width: 100%;
+  max-width: 250px;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+.form-group input, .form-group select, .form-group textarea {
+  width: 40%;
+  max-width: 470px;
+  letter-spacing: 0.05em;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 48px;
+  background: #ddd;
+}
+
+.form-group select {
+  width: 44%;
+}
+
+.form-group textarea {
+  height: 150px;
+  font-size: 18px;
+  padding: 1em;
+}
+
+.form-btn {
+  width: 100%;
+  text-align: center;
+}
+
+.contact_btn {
+  width: 250px;
+  height: 48px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background: #00A7EA;
+  border: 1px solid #00A7EA;
+  border-radius: 6px;
+  justify-content: center;
+}
+
+.contact_btn:hover {
+  opacity: 0.7;
+}
