@@ -7,7 +7,7 @@ use App\Http\Controllers\MakerController;
 
 //BL = ログイン前  AL = ログイン後
 //トップページへ
-Route::get('/',[MakerController::class, 'top']);
+Route::get('/',[MakerController::class, 'top'])->name('top');
 
 //Aboutページへ
 Route::get('/about',[UserController::class, 'about']);
@@ -32,6 +32,9 @@ Route::get('/search',[UserController::class, 'search']);
 
 //資料投稿ページへ
 Route::get('/upload',[MakerController::class, 'upload']);
+
+//資料投稿ページへ
+Route::post('/upload_act',[MakerController::class, 'upload_act']);
 
 //マイページへ
 Route::get('/myPage',[UserController::class, 'mypage']);

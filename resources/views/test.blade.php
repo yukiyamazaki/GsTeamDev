@@ -14,7 +14,7 @@
   <div>
     {{-- ここから資料投稿のテストFORM部分 --}}
     <h2>test1 資料投稿FORM</h2>
-    <form method="POST" action="{{ url('/testDocReg')}}" enctype="multipart/form-data">
+    <form method="post" action="{{ url('/testDocReg')}}" enctype="multipart/form-data">
       {{ csrf_field() }}
         <h3 >
           <span>資料情報</span>

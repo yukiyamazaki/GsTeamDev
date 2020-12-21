@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="{{ asset('assets/css/hp.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/top.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/contents.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/terms.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/about.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/contact.css') }}">
+    <link rel="stylesheet" href="{{asset('assets/css/terms.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/about.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/contact.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/upload.css')}}">
 </head>
 
 <body>
