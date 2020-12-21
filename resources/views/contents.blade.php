@@ -7,7 +7,7 @@
 
         <div id="pdf_wrapper">
             <div class="pdf_naiyou">
-                <p class="contents_name">{{ $document->title }}</p>
+                <p class="contents_name">タイトル：<span>{{ $document->title }}</span></p>
             </div>
             <iframe id="pdf_file" src="{{asset('/storage/'.$file_name)}}"></iframe>
         </div>
@@ -21,9 +21,11 @@
     </main>
 
     <aside class="contents_aside">
-
+        <p class="recomend_category">ー”<span class="rela_cate">{{ $document->subject }}</span>”科の新着教材ー</p>
+    @isset($relaiton_subjects)
+    @foreach($relaiton_subjects as $relaiton_subject)
         <div class="card-3">
-            <a href="{{ url('/contents') }}">
+            <a href="{{ route('contents',['id' => $relaiton_subject->id]) }}">
                 <div class="content-img">
                     <img src="{{ asset('assets/img/bg1.jpg') }}" />
                 </div>
@@ -31,82 +33,17 @@
                 <div class="content">
                     
                     <h3 class="title">
-                        デザイン探しをスマートに。HTML/CSSスニペットまとめ。
+                    {{ $relaiton_subject->title }}
                     </h3>
                     <span class="post-day">
-                        2020年06月27日
+                    {{ $relaiton_subject->created_at }}
                     </span>
                 </div>
             </a>
         </div>
-
-        <div class="card-3">
-
-            <div class="content-img">
-                <img src="{{ asset('assets/img/test.jpg') }}" />
-            </div>
-
-            <div class="content">
-                <h3 class="title">
-                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
-                </h3>
-                <span class="post-day">
-                2020年06月27日
-                </span>
-            </div>
-
-        </div>
-
-        <div class="card-3">
-
-            <div class="content-img">
-                <img src="{{ asset('assets/img/test1.jpg') }}" />
-            </div>
-
-            <div class="content">
-                <h3 class="title">
-                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
-                </h3>
-                <span class="post-day">
-                2020年06月27日
-                </span>
-            </div>
-
-        </div>
-
-        <div class="card-3">
-
-            <div class="content-img">
-                <img src="{{ asset('assets/img/test.jpg') }}" />
-            </div>
-
-            <div class="content">
-                <h3 class="title">
-                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
-                </h3>
-                <span class="post-day">
-                2020年06月27日
-                </span>
-            </div>
-
-        </div>
-
-        <div class="card-3">
-
-            <div class="content-img">
-                <img src="{{ asset('assets/img/test.jpg') }}" />
-            </div>
-
-            <div class="content">
-                <h3 class="title">
-                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
-                </h3>
-                <span class="post-day">
-                2020年06月27日
-                </span>
-            </div>
-
-        </div>
+    @endforeach
+    @endisset
+        
 
     </aside>
 

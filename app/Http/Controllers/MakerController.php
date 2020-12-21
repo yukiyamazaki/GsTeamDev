@@ -39,14 +39,18 @@ class MakerController extends Controller
     public function contents($id){
       //取得したidを元にdocumentテーブルから資料情報を取得
       $document = Document::where('id',$id)->first();
-
+      //file情報を取得
       $file_type = $document->file_type;
-      // echo $document;
+      $subject = $document->subject;
+
+      //取得したsubjectから関連科目を新着順に取得
+      $relaiton_subjects = Document::orderby('created_at','desc')->where('subject','=',$subject)->limit(4)->get();
+
 
       $file_name =  str_replace('public/','',$file_type);
 
       //file_nameがあれば行ける
-      return view('contents',compact('document','file_name'));
+      return view('contents',compact('document','file_name','relaiton_subjects'));
     }
 
   // 資料投稿ページへの遷移

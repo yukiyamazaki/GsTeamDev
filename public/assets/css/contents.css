@@ -1,7 +1,7 @@
 .contents_page{
     padding-top: 30px;
     font-size: 2rem;
-    width: 100%;
+    width: 98%;
     min-height: 100vh;
     display: grid;
     grid-template: 
@@ -26,11 +26,20 @@
 .pdf_naiyou {
     display: flex;
     justify-content: center;
+    margin-top: 36px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.rela_cate{
+    color: blue;
+    font-weight: bold;
 }
 
 #pdf_file{
     width: 500px;
     height: 730px;
+    border: 3px solid grey;
 
 }
 
@@ -90,8 +99,17 @@
 }
 
 .contents_aside{
-    grid-area: right;    
-    padding-right: 20px;
+    grid-area: right;
+    background: #EEEEEE;
+    display: block;
+    margin: 16px 0px 17px 0px;
+    border: solid 0.5px #DDDDDD;
+}
+
+.recomend_category {
+    font-size: 24px;
+    padding-top: 16px;
+    text-align: center;
 }
 
 .content-img img {
@@ -103,20 +121,21 @@
 }
   
 .card-3 {
-    width: 10em;
+    width: 12em;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 12px;
+    margin-top: 20px;
     cursor: pointer;
-    border: 0.5px solid #e9eaea;
+    border: 0.5px solid #CCCCCC;
     border-radius: 3px;
     transition: 0.3s;
+    background: white;
 }
 
 .content-img {
     padding: 0.4em 0;
     text-align: center;
-    background: #34ade6;
-}
+    background: #D7EEFF;}
 
 .content {
     padding: 0.4em 0;
