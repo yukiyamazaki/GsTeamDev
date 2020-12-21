@@ -10,3 +10,5 @@ class Like extends Model
     use HasFactory;
     protected $table = 'like';
 }
+
+?>

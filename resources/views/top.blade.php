@@ -17,55 +17,89 @@
 {{-- ここから投稿内容が表示される部分（人気）--}}
     <div class="card_top_wrapper">
     @isset($fav_1)
+
         <div class="card_top">
             <a href="{{ route('contents',['id' => $fav_1->post_id]) }}">
                 <div class="card_top_img">
-                    <img src="{{asset('assets/img/test.jpg')}}" />
+                    <img src="{{ asset('assets/img/test.jpg') }}" />
                 </div>
                 <div class="card_top_contents">
                     <h3 class="card_top_title">
                     {{ $fav_1->title}}
                     </h3>
-                    <h3>{{ $fav_1->likeid_sum}}</h3>
-                    <span class="card_top_day">
-                     {{ $fav_1->created_at}}
-                    </span>
+
+                    <div class="middle_wrapper">
+                        <img class="icon1" src="{{asset('assets/img/like.svg')}}" alt="お気に入り">
+                        <p>{{ $fav_1->likeid_sum}}</p>
+                        <img class="icon2" src="{{asset('assets/img/good.svg')}}" alt="いいね！">
+                        <p>237</p>
+                    </div>
+                
+                    <div class="category_wrapper">
+                        <h4>小学校</h4>
+                        <h4>2年</h4>
+                        <h4>国語</h4>
+                    </div>
+
+                    <div class="card_top_day">{{ $fav_1->updated_at }}</div>                  
                 </div>
-            </a>
+            </a>    
         </div>
 
         <div class="card_top">
             <a href="{{ route('contents',['id' => $fav_2->post_id]) }}">
                 <div class="card_top_img">
-                    <img src="{{asset('assets/img/test.jpg')}}" />
+                    <img src="{{ asset('assets/img/test.jpg') }}" />
                 </div>
                 <div class="card_top_contents">
                     <h3 class="card_top_title">
                     {{ $fav_2->title}}
                     </h3>
-                    <h3>{{ $fav_2->likeid_sum}}</h3>
-                    <span class="card_top_day">
-                     {{ $fav_2->created_at}}
-                    </span>
+
+                    <div class="middle_wrapper">
+                        <img class="icon1" src="{{asset('assets/img/like.svg')}}" alt="お気に入り">
+                        <p>{{ $fav_2->likeid_sum}}</p>
+                        <img class="icon2" src="{{asset('assets/img/good.svg')}}" alt="いいね！">
+                        <p>124</p>
+                    </div>
+                
+                    <div class="category_wrapper">
+                        <h4>高校</h4>
+                        <h4>1年</h4>
+                        <h4>歴史</h4>
+                    </div>
+
+                    <div class="card_top_day">{{ $fav_2->updated_at }}</div>                  
                 </div>
-            </a>
+            </a>    
         </div>
 
         <div class="card_top">
             <a href="{{ route('contents',['id' => $fav_3->post_id]) }}">
                 <div class="card_top_img">
-                    <img src="{{asset('assets/img/test.jpg')}}" />
+                    <img src="{{ asset('assets/img/test.jpg') }}" />
                 </div>
                 <div class="card_top_contents">
                     <h3 class="card_top_title">
                     {{ $fav_3->title}}
                     </h3>
-                    <h3>{{ $fav_3->likeid_sum}}</h3>
-                    <span class="card_top_day">
-                     {{ $fav_3->created_at}}
-                    </span>
+
+                    <div class="middle_wrapper">
+                        <img class="icon1" src="{{asset('assets/img/like.svg')}}" alt="お気に入り">
+                        <p>{{ $fav_3->likeid_sum}}</p>
+                        <img class="icon2" src="{{asset('assets/img/good.svg')}}" alt="いいね！">
+                        <p>126</p>
+                    </div>
+                
+                    <div class="category_wrapper">
+                        <h4>cate</h4>
+                        <h4>grade</h4>
+                        <h4>subj</h4>
+                    </div>
+
+                    <div class="card_top_day">{{ $fav_3->updated_at }}</div>                  
                 </div>
-            </a>
+            </a>    
         </div>
     @endisset
     </div>
@@ -84,7 +118,7 @@
 {{-- ここから投稿内容が表示される部分（新着）--}}
     <div class="card_top_wrapper">
     @isset($documents)
-        @foreach($documents as $document)
+        <!-- @foreach($documents as $document) -->
             <div class="card_top">
               <a href="{{ route('contents',['id' => $document->id]) }}">
                 <div class="card_top_img">
@@ -95,17 +129,21 @@
                     {{ $document->title}}
                     </h3>
                     <div class="category_wrapper">
-                        <h4>{{ $document->school_category }}</h4>
+                        <h4>{{ $document->school_categroy }}</h4>
                         <h4>{{ $document->grade }}</h4>
                         <h4>{{ $document->subject }}</h4>
                     </div>
-                    <span class="card_top_day">
-                    {{ $document->updated_at}}
-                    </span>
+                    <div class="middle_wrapper">
+                        <img class="icon1" src="{{asset('assets/img/like.svg')}}" alt="お気に入り">
+                        <p>{{ $document->like_count}}</p>
+                        <img class="icon2" src="{{asset('assets/img/good.svg')}}" alt="いいね！">
+                        <p>{{ $document->good_count}}</p>
+                    </div>
+                    <div class="card_top_day">{{ $document->updated_at }}</div>                  
                 </div>
                 </a>    
             </div>
-        @endforeach
+        <!-- @endforeach -->
     @endisset
 
     </div>

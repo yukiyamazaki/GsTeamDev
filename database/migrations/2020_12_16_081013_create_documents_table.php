@@ -24,8 +24,7 @@ class CreateDocumentsTable extends Migration
                 $table->string('subject',128)->nullable();
                 $table->string('grade',128)->nullable();
                 $table->timestamps();
-
-        });
+            });
     }
 
     /**

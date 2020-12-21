@@ -17,11 +17,17 @@ class MakerController extends Controller
 {
    // Topページへの遷移
    public function top(){
-    //documentテーブルのデータを取得
+    //documentテーブルのデータを取得（新着順）
     $documents = Document::orderby('created_at','desc')->limit(3)->get();
 
     //いいねが多い順で上位5件のPostを表示
     $documents_sums = Post_like::orderby('likeid_sum','desc')->limit(5)->get();
+
+    // $document_likes = Document::select(document.*)
+    //   ->join('Post_likes', 'document.id', '=', 'sPost_likes.post_user_id')
+    //   ->orderBy('Post_likes.likeid_sum', 'desc')
+    //   ->get();
+
 
     //繰り返し構文を使用せず人気記事を取得
     $fav_1 = $documents_sums[0];
