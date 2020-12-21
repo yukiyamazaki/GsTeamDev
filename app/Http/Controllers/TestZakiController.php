@@ -67,7 +67,7 @@ class TestZakiController extends Controller
         $document->save();
 
         return view('testZaki_result',
-    ['file_name'=>$file_name]);
+            ['file_name'=>$file_name]);
     }
 
 

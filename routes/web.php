@@ -25,7 +25,7 @@ Route::get('/login',[UserController::class, 'login']);
 Route::get('/login_act',[UserController::class, 'login_act']);
 
 //各投稿資料の詳細ページ
-Route::get('/contents',[MakerController::class, 'contents']);
+Route::get('contents/{id}',[MakerController::class, 'contents'])->name('contents');
 
 //検索時
 Route::get('/search',[UserController::class, 'search']);

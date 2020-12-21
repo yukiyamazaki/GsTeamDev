@@ -18,7 +18,7 @@
     <div class="card_top_wrapper">
     @isset($fav_1)
         <div class="card_top">
-            <a href="{{ url('/contents')}}">
+            <a href="{{ route('contents',['id' => $fav_1->id]) }}">
                 <div class="card_top_img">
                     <img src="{{asset('assets/img/test.jpg')}}" />
                 </div>
