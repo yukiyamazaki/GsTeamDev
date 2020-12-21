@@ -23,12 +23,6 @@ class MakerController extends Controller
     //いいねが多い順で上位5件のPostを表示
     $documents_sums = Post_like::orderby('likeid_sum','desc')->limit(5)->get();
 
-    // $document_likes = Document::select(document.*)
-    //   ->join('Post_likes', 'document.id', '=', 'sPost_likes.post_user_id')
-    //   ->orderBy('Post_likes.likeid_sum', 'desc')
-    //   ->get();
-
-
     //繰り返し構文を使用せず人気記事を取得
     $fav_1 = $documents_sums[0];
     $fav_2 = $documents_sums[1];
@@ -38,6 +32,16 @@ class MakerController extends Controller
 
     // echo $fav_1;
     return view('/top',compact('documents','fav_1','fav_2','fav_3','fav_4','fav_5'));
+
+     //お気に入りが多い順で上位5件のPostを表示
+     $like_num = Like::orderby('likeid_user_id','desc')->limit(5)->get();
+
+     //繰り返し構文を使用せず人気記事を取得
+     $fav_1 = $documents_sums[0];
+     $fav_2 = $documents_sums[1];
+     $fav_3 = $documents_sums[2];
+     $fav_4 = $documents_sums[3];
+     $fav_5 = $documents_sums[4];
 
   }
 
