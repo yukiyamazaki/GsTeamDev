@@ -9,7 +9,7 @@
             <div class="pdf_naiyou">
                 <p class="contents_name">{{ $document->title }}</p>
             </div>
-            <iframe id="pdf_file" src="{{ asset('assets/pdf/laravel6.pdf') }}"></iframe>
+            <iframe id="pdf_file" src="{{asset('/storage/'.$file_name)}}"></iframe>
         </div>
 
         <div id="btn_wrapper">    

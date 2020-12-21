@@ -36,13 +36,17 @@ class MakerController extends Controller
   }
 
     // content詳細を取得
-    public function contents(){
-      //idを取得
-
+    public function contents($id){
       //取得したidを元にdocumentテーブルから資料情報を取得
-      $document = Document::where('id',1)->first();
+      $document = Document::where('id',$id)->first();
 
-      return view('contents',compact('document'));
+      $file_type = $document->file_type;
+      // echo $document;
+
+      $file_name =  str_replace('public/','',$file_type);
+
+      //file_nameがあれば行ける
+      return view('contents',compact('document','file_name'));
     }
 
   // 資料投稿ページへの遷移

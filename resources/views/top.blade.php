@@ -18,7 +18,7 @@
     <div class="card_top_wrapper">
     @isset($fav_1)
         <div class="card_top">
-            <a href="{{ url('/contents')}}">
+            <a href="{{ route('contents',['id' => $fav_1->post_id]) }}">
                 <div class="card_top_img">
                     <img src="{{asset('assets/img/test.jpg')}}" />
                 </div>
@@ -26,7 +26,7 @@
                     <h3 class="card_top_title">
                     {{ $fav_1->title}}
                     </h3>
-                    <h3>{{ $fav_1->likeid_sum}}<</h3>
+                    <h3>{{ $fav_1->likeid_sum}}</h3>
                     <span class="card_top_day">
                      {{ $fav_1->created_at}}
                     </span>
@@ -35,34 +35,34 @@
         </div>
 
         <div class="card_top">
-            <a href="{{ url('/contents')}}">
+            <a href="{{ route('contents',['id' => $fav_2->post_id]) }}">
                 <div class="card_top_img">
                     <img src="{{asset('assets/img/test.jpg')}}" />
                 </div>
                 <div class="card_top_contents">
                     <h3 class="card_top_title">
-                    {{ $fav_1->title}}
+                    {{ $fav_2->title}}
                     </h3>
-                    <h3>{{ $fav_1->likeid_sum}}<</h3>
+                    <h3>{{ $fav_2->likeid_sum}}</h3>
                     <span class="card_top_day">
-                     {{ $fav_1->created_at}}
+                     {{ $fav_2->created_at}}
                     </span>
                 </div>
             </a>
         </div>
 
         <div class="card_top">
-            <a href="{{ url('/contents')}}">
+            <a href="{{ route('contents',['id' => $fav_3->post_id]) }}">
                 <div class="card_top_img">
                     <img src="{{asset('assets/img/test.jpg')}}" />
                 </div>
                 <div class="card_top_contents">
                     <h3 class="card_top_title">
-                    {{ $fav_1->title}}
+                    {{ $fav_3->title}}
                     </h3>
-                    <h3>{{ $fav_1->likeid_sum}}<</h3>
+                    <h3>{{ $fav_3->likeid_sum}}</h3>
                     <span class="card_top_day">
-                     {{ $fav_1->created_at}}
+                     {{ $fav_3->created_at}}
                     </span>
                 </div>
             </a>
@@ -86,19 +86,23 @@
     @isset($documents)
         @foreach($documents as $document)
             <div class="card_top">
-                <a href="{{ url('/contents')}}">
-                    <div class="card_top_img">
-                        <img src="{{ asset('assets/img/test.jpg') }}" />
-                    </div>
-                    <div class="card_top_contents">
-                        <h3 class="card_top_title">
-                        {{ $document->title}}
-                        </h3>
+              <a href="{{ route('contents',['id' => $document->id]) }}">
+                <div class="card_top_img">
+                    <img src="{{ asset('assets/img/test.jpg') }}" />
+                </div>
+                <div class="card_top_contents">
+                    <h3 class="card_top_title">
+                    {{ $document->title}}
+                    </h3>
+                    <div class="category_wrapper">
+                        <h4>{{ $document->school_category }}</h4>
+                        <h4>{{ $document->grade }}</h4>
                         <h4>{{ $document->subject }}</h4>
-                        <span class="card_top_day">
-                        {{ $document->updated_at}}
-                        </span>
                     </div>
+                    <span class="card_top_day">
+                    {{ $document->updated_at}}
+                    </span>
+                </div>
                 </a>    
             </div>
         @endforeach

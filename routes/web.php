@@ -25,7 +25,7 @@ Route::get('/login',[UserController::class, 'login']);
 Route::get('/login_act',[UserController::class, 'login_act']);
 
 //各投稿資料の詳細ページ
-Route::get('/contents',[MakerController::class, 'contents']);
+Route::get('contents/{id}',[MakerController::class, 'contents'])->name('contents');
 
 //検索時
 Route::get('/search',[UserController::class, 'search']);
@@ -37,7 +37,13 @@ Route::get('/upload',[MakerController::class, 'upload']);
 Route::post('/upload_act',[MakerController::class, 'upload_act']);
 
 //マイページへ
-Route::get('/myPage',[UserController::class, 'mypage']);
+Route::get('/mypage',[UserController::class, 'mypage']);
+
+//マイページの編集画面へ
+Route::get('/mypage_edit',[UserController::class, 'mypage_edit']);
+
+//マイページの編集処理画面へ
+Route::get('/mypage_edit_act',[UserController::class, 'mypage_edit_act']);
 
 //サポートページへ
 Route::get('/suport',[UserController::class, 'suport']);
