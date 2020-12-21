@@ -3,20 +3,16 @@
 
 <body class="use">
   <div class="us_wrapper">
-
-    <!-- header_coner -->
-     
-
       <!-- ② 検索エリア-->
       <div class="l-containers js-containers">
-        <form method="POST" action="{{  url('myPage_edit_act') }}" class="c-form" enctype="multipart/form-data">
-        <!-- {{ csrf_field() }} -->
+        <form method="get" action="{{  url('mypage_edit_act') }}" class="c-form" enctype="multipart/form-data">
+        {{ csrf_field() }}
           <div class="l-content">
             <div class="p-mypageHeader">
               <div class="p-mypageHeader_header">
                 <!-- <p class="p-mypageHeader_date">2020.11.01</p> -->
                 <p class="p-mypageHeader_rt">
-                  <a href="mypage.html">戻る</a>
+                  <a href="{{url('/mypage')}}">戻る</a>
                 </p>
               </div>
               <div class="p-mypageForm">
@@ -44,7 +40,7 @@
                           <tr>
                             <th class="c-formTable_th">
                               ユーザーネーム
-                              <span class="c-formTable_thLabel c-formTable_thLabel--blue">/</span>
+                              <span class="c-formTable_thLabel c-formTable_thLabel--blue">:</span>
                             </th>
                             <td class="c-formTable_td c-formTable_td--name">
                               <div class="c-formText">
@@ -57,50 +53,22 @@
                           <tr>
                             <th class="c-formTable_th">性別<span class="c-formTable_thLabel c-formTable_thLabel--gray">非公開</span></th>
                             <td class="c-formTable_td">
-                                                        <div class="c-formRadio">
+                              <!-- <div class="c-formRadio">
                                 <input class="js-addFormItem" id="gender_male" name="gender" type="radio" value="male">
                                 <label for="gender_male" class="js-addFormItem">男性</label>
                               </div>
                               <div class="c-formRadio">
                                 <input class="js-addFormItem" id="gender_famale" name="gender" type="radio" value="female">
                                 <label for="gender_famale" class="js-addFormItem">女性</label>
-                              </div>
+                              </div> -->
                             </td>
                           </tr>
-                          
-                          
-                          
-                          <!-- <tr>
-                              <th class="c-formTable_th">
-                                性別
-                                <span class="c-formTable_thLabel .c-formTable_thLabel--bluec-formTable_thLabel c-formTable_thLabel--gray">/</span>
-                              </th>
-                              <td class="c-formTable_td">
-                                <div class="c-formRadio">
-                                   <p> 
-                                  <input type="radio" name="gander" class="form-control" value="man">男性
-                                  <input type="radio" name="gander" class="form-control" value="fman">女性
-                                </p> -->
-
-                                  <!-- <label for="gender_male" class="js-addFormItem">
-                                    男性
-                                  </label>
-                                </div>
-                                <div class="c-formRadio">
-                                  <input class="js-addFormItem" id="gender_famale" type="radio" name="user_name" value="female">
-                                  <label for="gender_famale" class="js-addFormItem">
-                                    女性
-                                  </label> -->
-                                <!-- </div>
-                              </td>
-                            </tr> -->
-                            
-                            
+                        </tr> 
                             <!-- 生年月日 -->
                               <tr>
                                 <th class="c-formTable_th">
                                   生年月日
-                                  <span class="c-formTable_thLabel .c-formTable_thLabel--bluec-formTable_thLabel c-formTable_thLabel--gray">/</span>
+                                  <span class="c-formTable_thLabel .c-formTable_thLabel--bluec-formTable_thLabel c-formTable_thLabel--gray">:</span>
                                 </th>
                                 <td class="c-formTable_td">
                                   <div class="c-formSelect c-formSelect--year">
@@ -177,27 +145,27 @@
                                         <option value="1998">1998年</option>
                                         <option value="1999">1999年</option>
                                         <option value="2000">2000年</option>
-                                        <!-- <option value="2001">2001</option>
-                                        <option value="2002">2002</option>
-                                        <option value="2003">2003</option>
-                                        <option value="2004">2004</option>
-                                        <option value="2005">2005</option>
-                                        <option value="2006">2006</option>
-                                        <option value="2007">2007</option>
-                                        <option value="2008">2008</option>
-                                        <option value="2009">2009</option>
-                                        <option value="2010">2010</option>
-                                        <option value="2011">2011</option>
-                                        <option value="2012">2012</option>
-                                        <option value="2013">2013</option>
-                                        <option value="2014">2014</option>
-                                        <option value="2015">2015</option>
+                                        <option value="2001">2001年</option>
+                                        <option value="2002">2002年</option>
+                                        <option value="2003">2003年</option>
+                                        <option value="2004">2004年</option>
+                                        <option value="2005">2005年</option>
+                                        <option value="2006">2006年</option>
+                                        <option value="2007">2007年</option>
+                                        <option value="2008">2008年</option>
+                                        <option value="2009">2009年</option>
+                                        <option value="2010">2010年</option>
+                                        <option value="2011">2011年</option>
+                                        <option value="2012">2012年</option>
+                                        <option value="2013">2013年</option>
+                                        <option value="2014">2014年</option>
+                                        <option value="2015">2015年</option>
                                         <option value="2016">2016</option>
                                         <option value="2017">2017</option>
                                         <option value="2018">2018</option>
                                         <option value="2019">2019</option>
                                         <option value="2020">2020</option>
-                                        <option value="2021">2021</option>   -->
+                                        <option value="2021">2021</option> 
                                     </select>
                                       
                                   </div>
@@ -263,7 +231,7 @@
                               <tr>
                                 <th class="c-formTable_th">
                                   学校種別
-                                  <span class="c-formTable_thLabel .c-formTable_thLabel--bluec-formTable_thLabel c-formTable_thLabel--gray">/</span>
+                                  <span class="c-formTable_thLabel .c-formTable_thLabel--bluec-formTable_thLabel c-formTable_thLabel--gray">:</span>
                                 </th>
                                 <td class="c-formTable_th">                              
                                   <div class="c-formSelect c-formSelect--sc">
@@ -280,7 +248,7 @@
                               <tr>
                                 <th class="c-formTable_th">
                                   担当学年
-                                  <span class="c-formTable_thLabel .c-formTable_thLabel--bluec-formTable_thLabel c-formTable_thLabel--gray">/</span>
+                                  <span class="c-formTable_thLabel .c-formTable_thLabel--bluec-formTable_thLabel c-formTable_thLabel--gray">:</span>
                                 </th>
                                 <td class="c-formTable_th">                              
                                   <div class="c-formSelect c-formSelect--scg">
@@ -300,7 +268,7 @@
                               <tr>
                                 <th class="c-formTable_th">
                                   担当教科
-                                  <span class="c-formTable_thLabel .c-formTable_thLabel--bluec-formTable_thLabel c-formTable_thLabel--gray">/</span>
+                                  <span class="c-formTable_thLabel .c-formTable_thLabel--bluec-formTable_thLabel c-formTable_thLabel--gray">:</span>
                                 </th>
                                 <td class="c-formTable_th">                              
                                   <div class="c-formSelect c-formSelect--scg">
@@ -313,21 +281,13 @@
                                         <option value="理科">理科</option>
                                         <option value="社会">社会</option>
                                         </select>
-                                      <!-- <div class="col-sm-6">
-                                          <input type="radio" name="school_category" class="form-control" value="国語">国語
-                                          <input type="radio" name="school_category" class="form-control" value="外国語">外国語
-                                          <input type="radio" name="school_category" class="form-control" value="算数/数学">算数/数学
-                                          <input type="radio" name="school_category" class="form-control" value="社会">社会
-                                          <input type="radio" name="school_category" class="form-control" value="理科">理科
-                                           -->
                                       </div>
                                   </div> 
                     
                                      </div>
                               </tr>
-
                               <!-- 自己紹介 -->
-                                <!-- <tr>
+                                <tr>
                                   <th class="c-formTable_th">
                                     自己紹介
                                     <span class="c-formTable_thLabel c-formTable_thLabel--blue">/</span>
@@ -336,17 +296,15 @@
                                     <div class="c-formTextarea">
                                       <textarea type="text" placeholder="ユーザー名" name="profile" cols="50" rows="10" value=""></textarea>
                                     </div>
-                                  </td> -->
+                                  </td>
                                 </tr>
                                 <!-- メールアドレス -->
                                   <tr>
                                     <th class="c-formTable_th">
-                                      メールアドレス
-                                      <span class="c-formTable_thLabel c-formTable_thLabel--gray">/</span>
                                     </th>
                                     <td class="c-formTable_td">
                                       <p>
-                                        メールアドレスの登録は
+                                        メールアドレスの変更はこちら
                                         <a href="">こちらへ</a>
                                       </p>
                                     </td>
@@ -356,9 +314,9 @@
                     </div>
                     <div class="c-form_button">
                       <div class="c-button c-button--submit c-button--arrowRight">
-                        <a href="">
+                        <button type="submit">
                           <span>登録</span>
-                        </a>
+                        </button>
                       </div>
                     </div>
                     <div class="p-mypageForm_resign">
