@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/contact.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/upload.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/mypage.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/mypage_edit.css')}}">
  
 </head>
 

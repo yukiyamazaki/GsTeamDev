@@ -22,7 +22,7 @@
               <div class="p-mypageHeader_header">
                 <!-- <p class="p-mypageHeader_date">2020.11.01</p> -->
                 <p class="p-mypageHeader_edit">
-                  <a href="myPage_edit.html">プロフィール編集</a>
+                  <a href="{{url('/mypage_edit')}}">プロフィール編集</a>
                 </p>
               </div>
               <div class="p-mypageHeader_content">

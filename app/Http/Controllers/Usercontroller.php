@@ -78,6 +78,12 @@ class UserController extends Controller
   public function mypage(){
     return view('mypage');
   }
+
+  // myPage編集画面ページへの遷移
+  public function mypage_edit(){
+    return view('mypage_edit');
+  }
+
   // suport
   public function suport(){
     return view('suport');

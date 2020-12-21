@@ -39,6 +39,9 @@ Route::post('/upload_act',[MakerController::class, 'upload_act']);
 //マイページへ
 Route::get('/myPage',[UserController::class, 'mypage']);
 
+//マイページの編集画面へ
+Route::get('/mypage_edit',[UserController::class, 'mypage_edit']);
+
 //サポートページへ
 Route::get('/suport',[UserController::class, 'suport']);
 
