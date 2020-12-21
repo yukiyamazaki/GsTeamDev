@@ -7,13 +7,12 @@
 
         <div id="pdf_wrapper">
             <div class="pdf_naiyou">
-                <p class="contents_name">{{ $document->title}}</p>
+                <p class="contents_name">{{ $document->title }}</p>
             </div>
-                <iframe id="pdf_file" width="600px" height="730px"
-                 src="{{asset('/storage/'.$file_name)}}" ></iframe>
+            <iframe id="pdf_file" src="{{asset('/storage/'.$file_name)}}"></iframe>
         </div>
 
-        <div id="btn_wrapper">
+        <div id="btn_wrapper">    
             <input type="button" value="shere" id="shere_btn">
             <input type="button" value="like" id="like_btn">
             <p class="contents_like">200 likes</p>
@@ -24,21 +23,21 @@
     <aside class="contents_aside">
 
         <div class="card-3">
-            <a href="{{ url('/contents') }}">aaaa</a>
-            <div class="content-img">
-                <img src="{{ asset('assets/img/bg1.jpg') }}" />
-            </div>
+            <a href="{{ url('/contents') }}">
+                <div class="content-img">
+                    <img src="{{ asset('assets/img/bg1.jpg') }}" />
+                </div>
 
-            <div class="content">
-                
+                <div class="content">
+                    
                     <h3 class="title">
                         デザイン探しをスマートに。HTML/CSSスニペットまとめ。
                     </h3>
                     <span class="post-day">
                         2020年06月27日
                     </span>
-            </div>
-
+                </div>
+            </a>
         </div>
 
         <div class="card-3">
@@ -113,7 +112,7 @@
 
     <div class="contents_comment">
 
-        <div class="comment_wrapper">
+        <!-- <div class="comment_wrapper">
 
             <form action="" method="get">
                 <p class="comment_name">投稿する</p>
@@ -121,9 +120,23 @@
                 <input type="submit" value="送信" id="comment_send">
             </form>
 
+        </div> -->
+
+        <div class="comment_wrapper">
+            
+            <p class="toukou_name">投稿する</p>
+            <form action="" method="get">
+                <div class="FlexTextarea">
+                    <div class="FlexTextarea__dummy" aria-hidden="true"></div>
+                    <textarea id="FlexTextarea" class="FlexTextarea__textarea" placeholder="コメントを入力"></textarea>
+                </div>
+                <input type="submit" value="送信" id="comment_send">
+            </form>
+
         </div>
 
     </div>
+
 @endisset
 </section>
 

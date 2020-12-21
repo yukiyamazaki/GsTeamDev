@@ -187,7 +187,7 @@
           <p class="c-form_advice">施設登録後は誰でも編集できるようになります。入力できる項目のみお願いします。</p>
           <div class="js-tab c-tab c-tab--3" data-current="saunaMen">
             <div class="c-tab_contents">
-              <div class="c-tab_content js-tabContent" data-tab="saunaMen" style="">
+              <div class="c-tab_content js-tabContent" data-tab="saunaMen">
                 <div class="js-addForm">
                   <table class="c-formTable is-addForm js-formTable">
                     <!-- ここから途中 -->
