@@ -1,4 +1,5 @@
 .contents_page{
+    padding-top: 30px;
     font-size: 2rem;
     width: 100%;
     min-height: 100vh;
@@ -22,10 +23,32 @@
     text-align: center;
 }
 
+.pdf_naiyou {
+    display: flex;
+    justify-content: center;
+}
+
+.contents_name{
+    font-size: 0.8em;
+    padding-bottom: 20px;
+}
+
+.contents_like{
+    font-size: 0.7em;
+}
+
+#btn_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
 #shere_btn{
     font-size: 0.5em;
     font-weight: bold;
-    padding: 10px 30px;
+    padding: 8px 10px;
+    margin-right: 20px;
     background-color: #2792c3;
     color: #fff;
     border-style: solid;
@@ -42,7 +65,8 @@
 #like_btn{
     font-size: 0.5em;
     font-weight: bold;
-    padding: 10px 30px;
+    padding: 8px 10px;
+    margin-right: 10px;
     background-color: #2792c3;
     color: #fff;
     border-style: solid;
@@ -62,14 +86,17 @@
 }
 
 .content-img img {
-    width: 6.0em;
-    min-height: 100px;
+    /* width: 6.0em;
+    min-height: 100px; */
+    width: 200px;
+    height: 150px;
+    object-fit: contain;
 }
   
 .card-3 {
-    width: 12em;
+    width: 10em;
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     cursor: pointer;
     border: 0.5px solid #e9eaea;
     border-radius: 3px;
@@ -79,7 +106,7 @@
 .content-img {
     padding: 0.4em 0;
     text-align: center;
-    background: #e1f3ff;
+    background: #34ade6;
 }
 
 .content {
@@ -97,7 +124,7 @@
 
 .post-day {
     padding: 0 0.3em;
-    font-size: 0.2em;
+    font-size: 0.4em;
     color: #777;
 }
 
@@ -105,7 +132,32 @@
     grid-area: footer;
 }
 
+.comment_wrapper{
+    text-align: center;
+}
+
+.comment_name{
+    font-size: 0.6em;
+}
+
 #comment_area{
     border: solid 1px;
     font-size: 15px;
+}
+
+#comment_send{
+    font-size: 0.5em;
+    font-weight: bold;
+    padding: 8px 10px;
+    background-color: #2792c3;
+    color: #fff;
+    border-style: solid;
+    box-shadow: 2px 2px 3px 1px #666;
+    -moz-box-shadow: 2px 2px 3px 1px #666;
+    -webkit-box-shadow: 2px 2px 3px 1px #666;  
+}
+
+#comment_send:hover{
+    background-color:  #34ade6;
+    color: #fff;
 }

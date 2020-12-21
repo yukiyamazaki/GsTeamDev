@@ -3,7 +3,9 @@
 
 <section class="first_view">
 
-    <h1></h1>
+    <div class="fv_logo">
+        <img class="fv_img" src="{{ asset('assets/img/fv_logo.png') }}" alt="">
+    </div>
 
 </section>
 
