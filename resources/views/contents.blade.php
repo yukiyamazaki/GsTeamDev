@@ -2,7 +2,7 @@
 @section('content')
 
 <section class="contents_page">
-
+@isset($document)
     <main class="contents_main">
 
         <div id="pdf_wrapper">
@@ -12,7 +12,9 @@
             <iframe id="pdf_file" width="600px" height="730px" src="{{ asset('assets/pdf/laravel6.pdf') }}"></iframe>
         </div>
 
-        <div id="btn_wrapper">
+        <div id="ｂｔｎ_wrapper">
+        <p>{{ $document->title}}</p>
+        
             <input type="button" value="shere" id="shere_btn">
             <input type="button" value="like" id="like_btn">
             <p class="contents_like">200 likes</p>
@@ -23,18 +25,19 @@
     <aside class="contents_aside">
 
         <div class="card-3">
-
+            <a href="{{ url('/contents') }}">aaaa</a>
             <div class="content-img">
                 <img src="{{ asset('assets/img/bg1.jpg') }}" />
             </div>
 
             <div class="content">
-                <h3 class="title">
-                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
-                </h3>
-                <span class="post-day">
-                2020年06月27日
-                </span>
+                
+                    <h3 class="title">
+                        デザイン探しをスマートに。HTML/CSSスニペットまとめ。
+                    </h3>
+                    <span class="post-day">
+                        2020年06月27日
+                    </span>
             </div>
 
         </div>
@@ -122,7 +125,7 @@
         </div>
 
     </div>
-
+@endisset
 </section>
 
 @endsection

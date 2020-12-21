@@ -19,8 +19,6 @@
 
 .fv_img{
     width: 100%;
-}
-
 /* .fv_text{
     width: 80%;
     margin: 0 auto;
@@ -50,6 +48,7 @@
     font-weight: bold;
     padding-top: 20px;
     padding-bottom: 20px;
+    margin-top: 30px;
 }
 
 .hot_next{
@@ -109,6 +108,24 @@
 .card_top_wrapper{
     display: flex;
 }
+
+.search_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    position: relative;
+    width: 90%;
+}
+
+.search_card {
+    width: 29%;
+    cursor: pointer;
+    border: 0.5px solid #e9eaea;
+    border-radius: 3px;
+    transition: 0.3s;
+    margin: 1% 1% 4% 3%;
+}
+
 
 
 .card_top {
