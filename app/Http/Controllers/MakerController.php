@@ -38,7 +38,7 @@ class MakerController extends Controller
     // content詳細を取得
     public function contents($id){
       //取得したidを元にdocumentテーブルから資料情報を取得
-      $document = Document::where('id',132)->first();
+      $document = Document::where('id',$id)->first();
 
       $file_type = $document->file_type;
       // echo $document;
