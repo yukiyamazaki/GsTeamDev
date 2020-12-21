@@ -155,7 +155,30 @@
     padding: 0.4em 0;
 }
 
-.card_top_title,
+.card_top_title {
+    position: relative;
+    padding: 0 0.3em;
+    margin: 0;
+    font-size: 1.0em;
+    line-height: 1.5;
+}
+
+.category_wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 10%;
+}
+
+h4 {
+    font-size: 0.9em;
+    background: #0fb3ff;
+    border-radius: 4px;
+    color: #fff;
+    margin: 6px;
+    padding: 3px 8px;
+}
+
 .card_top_day {
     position: relative;
     padding: 0 0.3em;
@@ -166,6 +189,6 @@
 
 .card_top_day {
     padding: 0 0.3em;
-    font-size: 0.2em;
+    font-size: 0.4em;
     color: #777;
 }

@@ -94,7 +94,11 @@
                     <h3 class="card_top_title">
                     {{ $document->title}}
                     </h3>
-                    <h4>{{ $document->subject }}</h4>
+                    <div class="category_wrapper">
+                        <h4>{{ $document->school_category }}</h4>
+                        <h4>{{ $document->grade }}</h4>
+                        <h4>{{ $document->subject }}</h4>
+                    </div>
                     <span class="card_top_day">
                     {{ $document->updated_at}}
                     </span>
