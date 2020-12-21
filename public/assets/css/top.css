@@ -69,6 +69,7 @@
     box-shadow: 2px 2px 3px 1px #666;
     -moz-box-shadow: 2px 2px 3px 1px #666;
     -webkit-box-shadow: 2px 2px 3px 1px #666;
+    margin: 40px auto;
 }
 
 #hot_btn:hover{
@@ -137,6 +138,11 @@
     border: 0.5px solid #e9eaea;
     border-radius: 3px;
     transition: 0.3s;
+}
+
+.card_top:hover {
+    transform:scale(1.05, 1.05);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
 }
 
 .card_top_img {
