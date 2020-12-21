@@ -45,12 +45,37 @@ class MakerController extends Controller
       return view('contents',compact('document'));
     }
 
-    
-
-
   // 資料投稿ページへの遷移
-  public function upload(){
+  public function upload(Request $request){
+
     return view('upload');
+  }
+
+
+  // 資料投稿処理
+  public function upload_act(Request $request){
+    //1.formで登録されたデータを取得＆保存
+    $title = $request->get('title'); 
+    $description = $request->get('description');
+    $subject = $request->get('subject');
+    $grade = $request->get('grade');
+    $school_categroy = $request->get('category');
+    $document_pass = $request->file;
+    //投稿したfileの取得
+    $filePath = $document_pass->store('public');
+
+    //データベース登録
+    $document = new Document;
+    $document->title = $title;
+    $document->discription = $description;
+    $document->subject = $subject;
+    $document->grade = $grade;
+    $document->school_categroy = $school_categroy;
+    $document->document_name = $document_pass;
+    $document->file_type = str_replace('public/','',$filePath);
+    $document->save();
+
+    return redirect()->route('top');
   }
   
 }

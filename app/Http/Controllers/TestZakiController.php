@@ -37,11 +37,10 @@ class TestZakiController extends Controller
 
     //投稿登録機能
     public function testDocReg(Request $request){
-
-        //$filePath = $request->file('file')->store('/files','public');
         // fileの受け取り
         $image = $request->file;
         $filePath = $image->store('public');
+        echo $filePath;
 
         //1.資料保存のformで登録されたデータを取得＆保存
         $all = $request->all();

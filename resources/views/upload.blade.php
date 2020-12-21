@@ -7,7 +7,7 @@
       <li class="fileItem radius clear">
         <div class="clearfix">
           <div class="upload">
-            <form method="get" action="" class="fileListForm-x clear" enctype="multipart/form-data">
+            <form method="post" action="{{ url('/upload_act')}}" class="fileListForm-x clear" enctype="multipart/form-data">
             {{ csrf_field() }}
               <div class="controls-container j-controls-container">
                 <div class="header-container row">
@@ -22,7 +22,7 @@
                     <div class="iframe-wrapper">
                       <div class="overlay">
                         <div class="iframe-msg text-center">
-                          <input type="file" name="file">
+                          <input type="file" name="file" id="file">
                           <span class="message">ファイル選択</span>
                         </div>
                       </div>
@@ -64,7 +64,7 @@
                     <div class="row">
                       <div class="large-6 column">
                         <label class="required" for="">学年</label>
-                          <select>
+                          <select class="grade" name="grade">
                             <option value="">担当学年を選択してください</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -79,7 +79,7 @@
                     <div class="row">
                       <div class="large-6 column">
                         <label class="required" for="">小中高大</label>
-                          <select>
+                          <select name="category">
                             <option value="">学校種別を選択してください</option>
                             <option value="小学校">小学校</option>
                             <option value="中学校">中学校</option>
