@@ -7,14 +7,13 @@
 
         <div id="pdf_wrapper">
             <div class="pdf_naiyou">
-                <p class="contents_name">初めてのGitHub!</p>
+                <p class="contents_name">{{ $document->title}}</p>
             </div>
-            <iframe id="pdf_file" width="600px" height="730px" src="{{ asset('assets/pdf/laravel6.pdf') }}"></iframe>
+                <iframe id="pdf_file" width="600px" height="730px"
+                 src="{{asset('/storage/'.$file_name)}}" ></iframe>
         </div>
 
-        <div id="ｂｔｎ_wrapper">
-        <p>{{ $document->title}}</p>
-        
+        <div id="btn_wrapper">
             <input type="button" value="shere" id="shere_btn">
             <input type="button" value="like" id="like_btn">
             <p class="contents_like">200 likes</p>
