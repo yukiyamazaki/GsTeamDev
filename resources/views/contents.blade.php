@@ -5,21 +5,24 @@
 @isset($document)
     <main class="contents_main">
 
-        <p>center</p>
-    
         <div id="pdf_wrapper">
+            <div class="pdf_naiyou">
+                <p class="contents_name">初めてのGitHub!</p>
+            </div>
+            <iframe id="pdf_file" width="600px" height="730px" src="{{ asset('assets/pdf/laravel6.pdf') }}"></iframe>
+        </div>
+
+        <div id="ｂｔｎ_wrapper">
         <p>{{ $document->title}}</p>
-            <iframe id="pdf_file" width="600px" height="730px" src="{{ asset('assets/pdf/lab10git.pdf') }}"></iframe>
-            
+        
             <input type="button" value="shere" id="shere_btn">
             <input type="button" value="like" id="like_btn">
+            <p class="contents_like">200 likes</p>
         </div>
 
     </main>
 
     <aside class="contents_aside">
-
-        <p>right</p>
 
         <div class="card-3">
             <a href="{{ url('/contents') }}">aaaa</a>
@@ -111,11 +114,15 @@
 
     <div class="contents_comment">
 
-        <form action="" method="get">
-            <p>comments</p>
-            <textarea name="" id="comment_area" cols="60" rows="10"></textarea>
-            <input type="submit" value="送信">
-        </form>
+        <div class="comment_wrapper">
+
+            <form action="" method="get">
+                <p class="comment_name">投稿する</p>
+                <textarea name="" id="comment_area" cols="60" rows="2"></textarea>
+                <input type="submit" value="送信" id="comment_send">
+            </form>
+
+        </div>
 
     </div>
 @endisset

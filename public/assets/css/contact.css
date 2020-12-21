@@ -29,10 +29,11 @@
 
 .form-group p {
   width: 100%;
-  max-width: 250px;
+  max-width: 200px;
   letter-spacing: 0.05em;
   font-weight: bold;
   font-size: 18px;
+  color: #00A7EA;
 }
 
 
@@ -51,7 +52,9 @@
 }
 
 .form-group select {
-  width: 44%;
+  width: 40%;
+  font-size: 18px;
+  color: #444;
 }
 
 .form-group textarea {
@@ -80,4 +83,13 @@
 
 .contact_btn:hover {
   opacity: 0.7;
+}
+
+@media (max-width: 800px) {
+  .form-group {
+    display: block;
+  }
+
+  .form-group p, .form-group input, .form-group select, .form-group textarea {
+    width: 60%;
 }

@@ -1,17 +1,38 @@
 .first_view{
     width: 100%;
-    height: 200px;
-    background-color: #31ace6;
-    font-size: 100px;
+    height: 240px;
+    background-color: #0fb3ff;
+    /* font-size: 100px; */
+    position: relative;
+}
+
+.fv_logo{
+    /* mix-blend-mode: multiply; */
+    /* display: flex;
+    justify-content: center; */
+    position: absolute;
+    width: 750px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fv_img{
+    width: 100%;
+/* .fv_text{
+    width: 80%;
+    margin: 0 auto;
     text-align: center;
-    align-items: center;
-}
+    padding-top: 70px;
+    color: yellow;
+} */
 
-
-.first_view
- h1{
-    line-height: 160px;
-}
+/* .first_view h1{
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    font-family: "Noto Sans JP";
+} */
 
 .rcmd_title{
     text-align: center;
