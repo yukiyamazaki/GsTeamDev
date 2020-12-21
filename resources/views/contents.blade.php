@@ -13,7 +13,7 @@
                  src="{{asset('/storage/'.$file_name)}}" ></iframe>
         </div>
 
-        <div id="ｂｔｎ_wrapper">
+        <div id="btn_wrapper">
             <input type="button" value="shere" id="shere_btn">
             <input type="button" value="like" id="like_btn">
             <p class="contents_like">200 likes</p>

@@ -66,9 +66,9 @@ class UserController extends Controller
   public function search(Request $request){
     // jsで受け取った値を変数へ格納
     // $all = $request->all();
-    // $keyword = $request->get('keyword'); 
+    $keyword = $request->get('keyword'); 
     //キーワードを元に
-    $search_contents = Document::orderby('created_at','desc')->where('title','like','%g%')->get();
+    $search_contents = Document::orderby('created_at','desc')->where('title','like','%'.$keyword.'%')->get();
 
     //取得したidを元にdocumentテーブルから資料情報を取得
     // $document = Document::where($searchid->id,1)->first();

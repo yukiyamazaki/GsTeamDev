@@ -35,7 +35,7 @@
         </div>
 
         <div class="card_top">
-            <a href="{{ url('/contents')}}">
+            <a href="{{ route('contents',['id' => $fav_2->id]) }}">
                 <div class="card_top_img">
                     <img src="{{asset('assets/img/test.jpg')}}" />
                 </div>
@@ -52,7 +52,7 @@
         </div>
 
         <div class="card_top">
-            <a href="{{ url('/contents')}}">
+            <a href="{{ route('contents',['id' => $fav_3->id]) }}">
                 <div class="card_top_img">
                     <img src="{{asset('assets/img/test.jpg')}}" />
                 </div>
@@ -86,19 +86,19 @@
     @isset($documents)
         @foreach($documents as $document)
             <div class="card_top">
-                <a href="{{ url('/contents')}}">
-                    <div class="card_top_img">
-                        <img src="{{ asset('assets/img/test.jpg') }}" />
-                    </div>
-                    <div class="card_top_contents">
-                        <h3 class="card_top_title">
-                        {{ $document->title}}
-                        </h3>
-                        <h4>{{ $document->subject }}</h4>
-                        <span class="card_top_day">
-                        {{ $document->updated_at}}
-                        </span>
-                    </div>
+              <a href="{{ route('contents',['id' => $document->id]) }}">
+                <div class="card_top_img">
+                    <img src="{{ asset('assets/img/test.jpg') }}" />
+                </div>
+                <div class="card_top_contents">
+                    <h3 class="card_top_title">
+                    {{ $document->title}}
+                    </h3>
+                    <h4>{{ $document->subject }}</h4>
+                    <span class="card_top_day">
+                    {{ $document->updated_at}}
+                    </span>
+                </div>
                 </a>    
             </div>
         @endforeach
