@@ -6,13 +6,14 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP">
     <link rel="stylesheet" href="{{ asset('assets/css/destyle.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/hp.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/top.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/contents.css') }}">
-    <link rel="stylesheet" href="{{asset('assets/css/terms.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/about.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/contact.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/terms.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/about.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/contact.css') }}">
 </head>
 
 <body>
