@@ -35,6 +35,10 @@
                     <h3 class="title">
                     {{ $relaiton_subject->title }}
                     </h3>
+                    <div class="fav_box_contents">
+                        <img class="fav_img_contents" src="{{asset('assets/img/fav_heart.svg')}}" alt="">
+                        <span class="fab_img_contents">245</span>
+                    </div>
                     <span class="post-day">
                     {{ $relaiton_subject->created_at }}
                     </span>

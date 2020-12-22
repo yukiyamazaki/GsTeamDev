@@ -265,3 +265,16 @@
     background-color:  #34ade6;
     color: #fff;
 }
+
+.fav_box_contents{
+
+}
+
+.fab_img_contents {
+    font-size: 24px;
+}
+
+.fav_img_contents {
+    width: 25px;
+    margin-left: 72%;
+}
