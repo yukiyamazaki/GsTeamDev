@@ -20,6 +20,13 @@ class MakerController extends Controller
     //documentテーブルのデータを取得
     $documents = Document::orderby('created_at','desc')->limit(3)->get();
 
+    $document = Document::where('id',3)->first();
+
+    $file_type = $document->file_type;
+    // echo $document;
+
+    $file_name =  str_replace('public/','',$file_type);
+
     //いいねが多い順で上位5件のPostを表示
     $documents_sums = Post_like::orderby('likeid_sum','desc')->limit(5)->get();
 
@@ -31,7 +38,7 @@ class MakerController extends Controller
     $fav_5 = $documents_sums[4];
 
     // echo $fav_1;
-    return view('/top',compact('documents','fav_1','fav_2','fav_3','fav_4','fav_5'));
+    return view('/top',compact('documents','file_name','fav_1','fav_2','fav_3','fav_4','fav_5'));
 
   }
 
