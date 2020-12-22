@@ -6,10 +6,33 @@
     position: relative;
 }
 
+.fv_svg{
+    position: absolute;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.effect_contents{
+    width: 100%;
+    height: 240px;
+    background: url(../img/fv_logo_trace4.png) repeat;
+    background-size:  100%;
+    animation: bgscroll 60s linear infinite;
+    mix-blend-mode: soft-light;
+}
+
+@-webkit-keyframes bgscroll {
+ 0% {background-position: 0 0;}
+ 100% {background-position: 0 240px;}
+}
+
+@keyframes bgscroll {
+ 0% {background-position: 0 0;}
+ 100% {background-position: 0 -3000px;}
+}
+
 .fv_logo{
-    /* mix-blend-mode: multiply; */
-    /* display: flex;
-    justify-content: center; */
     position: absolute;
     width: 750px;
     top: 50%;
@@ -132,7 +155,7 @@
 
 
 .card_top {
-    width: 15em;
+    width: 20em;
     margin: 0 auto;
     /* margin-bottom: 50px; */
     cursor: pointer;

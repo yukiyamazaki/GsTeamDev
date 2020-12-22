@@ -3,7 +3,11 @@
 
 <section class="first_view">
 
-    <div class="fv_logo">
+<!-- <img class="fv_svg" src="{{ asset('assets/img/fv_logo_trace4.png') }}" alt=""> -->
+
+    <div class="effect_contents"></div>
+
+    <div class="fv_logo"> 
         <img class="fv_img" src="{{ asset('assets/img/fv_logo.png') }}" alt="">
     </div>
 
@@ -97,27 +101,34 @@
     @isset($documents)
         <!-- @foreach($documents as $document) -->
             <div class="card_top">
-              <a href="{{ route('contents',['id' => $document->id]) }}">
-                <div class="card_top_img">
-                    <img src="{{ asset('assets/img/test.jpg') }}" />
-                </div>
-                <div class="card_top_contents">
-                    <h3 class="card_top_title">
-                    {{ $document->title}}
-                    </h3>
-                    <div class="category_wrapper">
-                        <h4>{{ $document->school_categroy }}</h4>
-                        <h4>{{ $document->grade }}</h4>
-                        <h4>{{ $document->subject }}</h4>
+                <a href="{{ route('contents',['id' => $document->id]) }}">
+
+                    <!-- <div class="card_top_img">
+                        <img src="{{ asset('assets/img/test.jpg') }}" />
+                    </div> -->
+
+                    <iframe class="samune" src="/pdfjs/web/viewer.html?file={{asset('/storage/'.$file_name)}}#page=1&scrollbar=0&view=Fit&viewrect=0,0,570,0" 
+                        marginwidth="0" marginheight="0" frameborder="no" style="pointer-events:none;" style="border:none;"></iframe>
+
+                    <div class="card_top_contents">
+                        <h3 class="card_top_title">
+                        {{ $document->title}}
+                        </h3>
+                        <div class="category_wrapper">
+                            <h4>{{ $document->school_category }}</h4>
+                            <h4>{{ $document->grade }}</h4>
+                            <h4>{{ $document->subject }}</h4>
+                        </div>
+                        <div class="middle_wrapper">
+                          <img class="icon1" src="{{asset('assets/img/like.svg')}}" alt="お気に入り">
+                          <p>{{ $document->like_count}}</p>
+                          <img class="icon2" src="{{asset('assets/img/good.svg')}}" alt="いいね！">
+                          <p>{{ $document->good_count}}</p>
+                        </div>
+                        
+                       <div class="card_top_day">{{ $document->updated_at }}</div>//spanタブかも。。。。
                     </div>
-                    <div class="middle_wrapper">
-                        <img class="icon1" src="{{asset('assets/img/like.svg')}}" alt="お気に入り">
-                        <p>{{ $document->like_count}}</p>
-                        <img class="icon2" src="{{asset('assets/img/good.svg')}}" alt="いいね！">
-                        <p>{{ $document->good_count}}</p>
-                    </div>
-                    <div class="card_top_day">{{ $document->updated_at }}</div>                  
-                </div>
+
                 </a>    
             </div>
         <!-- @endforeach -->

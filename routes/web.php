@@ -74,8 +74,8 @@ Route::get('/kazukiti', function(){
     return view('kazukiti');
 });
 /* isii TEST */
-Route::get('/isii', function(){
-    return view('isii');
+Route::get('/isi', function(){
+    return view('isi');
 });
 
 
