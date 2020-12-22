@@ -92,7 +92,7 @@
 
     <div class="hot_title">
 
-        <h2>ー 新着 ー</h2>
+        <h2 class="h2_top">ー 新着 ー</h2>
 
     </div>
 
@@ -106,6 +106,8 @@
                     <!-- <div class="card_top_img">
                         <img src="{{ asset('assets/img/test.jpg') }}" />
                     </div> -->
+
+                   
 
                     <iframe class="samune" src="../pdfjs/web/viewer.html?file={{asset('/storage/'.$file_name)}}#page=1&scrollbar=0&view=Fit&viewrect=0,0,570,0" 
                         marginwidth="0" marginheight="0" frameborder="no" style="pointer-events:none;" style="border:none;"></iframe>

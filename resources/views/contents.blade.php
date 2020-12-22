@@ -27,8 +27,8 @@
         <div class="card-3">
             <a href="{{ route('contents',['id' => $relaiton_subject->id]) }}">
                 <div class="content-img">
-                <iframe class="samune" src="/pdfjs/web/viewer.html?file={{asset('/storage/'.$file_name)}}#page=#page=1&scrollbar=0&view=Fit&viewrect=0,0,570,0" 
-                    marginwidth="0" marginheight="0" frameborder="no" style="pointer-events:none;" style="border:none;"></iframe>
+                    <img src="{{ asset('assets/img/bg1.jpg') }}" />
+                </div>
 
                 <div class="content">
                     
