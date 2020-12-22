@@ -60,11 +60,11 @@
             <ul class="menu">
                 <li class="menu_single">
                     <ul class="menu_second">
-                        <li><a href="{{ url('/') }}">項目１</a></li>
-                        <li><a href="{{ url('/') }}">項目２</a></li>
-                        <li><a href="{{ url('/') }}">項目３</a></li>
-                        <li><a href="{{ url('/') }}">項目４</a></li>
-                        <li><a href="{{ url('/') }}">項目５</a></li>
+                        <li><a class="menu_time" href="{{ url('/mypage') }}">マイページへ</a></li>
+                        <li><a href="{{ url('/about') }}"><span>About</span></a></li>
+                        <li><a href="{{ url('/suport') }}">サポート</a></li>
+                        <li><a href="{{ url('/contact') }}">問い合わせ</a></li>
+                        <li><a href="{{ url('/logout') }}">ログアウト</a></li>
                     </ul>
                 </li>
             </ul>
