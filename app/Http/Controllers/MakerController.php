@@ -22,10 +22,10 @@ class MakerController extends Controller
 
     $document = Document::where('id',3)->first();
 
+    //メイン部分のfile情報を取得
     $file_type = $document->file_type;
-    // echo $document;
-
     $file_name =  str_replace('public/','',$file_type);
+
 
     //いいねが多い順で上位5件のPostを表示
     $documents_sums = Post_like::orderby('likeid_sum','desc')->limit(5)->get();
@@ -44,6 +44,7 @@ class MakerController extends Controller
     $fov_4_id = $fav_4 ->id;
     $fov_5_id = $fav_5 ->id;
 
+
     //取得したIDから各々情報を取得
     $fav1_doc = Document::where('id',$fov_1_id)->first();
     $fav2_doc = Document::where('id',$fov_2_id)->first();
@@ -51,7 +52,7 @@ class MakerController extends Controller
     $fav4_doc = Document::where('id',$fov_4_id)->first();
     $fav5_doc = Document::where('id',$fov_5_id)->first();
     $fav1_doc = Document::where('id',$fov_1_id)->first();
-    echo $documents;
+  
     //viewへ情報を投げる
     return view('/top',compact('documents','file_name','fav_1','fav_2','fav_3','fav_4','fav_5','fav1_doc','fav2_doc','fav3_doc','fav4_doc','fav5_doc'));
 
@@ -70,8 +71,12 @@ class MakerController extends Controller
       //取得したsubjectから関連科目を新着順に取得
       $relaiton_subjects = Document::orderby('created_at','desc')->where('subject','=',$subject)->limit(4)->get();
 
-
+      //fileの情報を取得
       $file_name =  str_replace('public/','',$file_type);
+
+      //関連科目のfileデータを取得
+      // $file_names = $relaiton_subjects->file_type;
+      // echo $file_names;
 
       //file_nameがあれば行ける
       return view('contents',compact('document','file_name','relaiton_subjects'));

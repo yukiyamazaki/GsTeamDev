@@ -133,6 +133,8 @@
 
 .card_top_wrapper{
     display: flex;
+    justify-content: center;
+    margin-right: 5px;
 }
 
 .search_wrapper {
@@ -152,11 +154,15 @@
     margin: 1% 1% 4% 3%;
 }
 
+.h2_top{
+    margin-top: 26px;
+}
+
 
 
 .card_top {
     width: 20em;
-    margin: 0 auto;
+    margin: 0px 45px 0 45px;
     /* margin-bottom: 50px; */
     cursor: pointer;
     border: 0.5px solid #e9eaea;
