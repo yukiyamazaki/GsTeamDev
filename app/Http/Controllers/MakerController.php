@@ -17,7 +17,7 @@ class MakerController extends Controller
 {
    // Topページへの遷移
    public function top(){
-    //documentテーブルのデータを取得
+    //documentテーブルのデータを取得（新着順）
     $documents = Document::orderby('created_at','desc')->limit(3)->get();
 
     //いいねが多い順で上位5件のPostを表示
@@ -47,6 +47,16 @@ class MakerController extends Controller
     echo $documents;
     //viewへ情報を投げる
     // return view('/top',compact('documents','fav_1','fav_2','fav_3','fav_4','fav_5','fav1_doc','fav2_doc','fav3_doc','fav4_doc','fav5_doc'));
+
+     //お気に入りが多い順で上位5件のPostを表示
+     $like_num = Like::orderby('likeid_user_id','desc')->limit(5)->get();
+
+     //繰り返し構文を使用せず人気記事を取得
+     $fav_1 = $documents_sums[0];
+     $fav_2 = $documents_sums[1];
+     $fav_3 = $documents_sums[2];
+     $fav_4 = $documents_sums[3];
+     $fav_5 = $documents_sums[4];
 
   }
 

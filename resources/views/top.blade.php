@@ -17,33 +17,35 @@
 {{-- ここから投稿内容が表示される部分（人気）--}}
     <div class="card_top_wrapper">
     @isset($fav_1)
+
         <div class="card_top">
             <a href="{{ route('contents',['id' => $fav_1->post_id]) }}">
                 <div class="card_top_img">
-                    <img src="{{asset('assets/img/test.jpg')}}" />
+                    <img src="{{ asset('assets/img/test.jpg') }}" />
                 </div>
-                <div class="card_top_contents">
+               <div class="card_top_contents">
                     <h3 class="card_top_title">
                     {{ $fav1_doc->title}}
                     </h3>
                     <div class="fav_box">
                         <img class="fav_img" src="{{asset('assets/img/fav_heart.svg')}}" alt="">
-                        <span>{{ $fav_1->likeid_sum}}</span>
+                        <span>{{ $fav_2->likeid_sum}}</span>
                     </div>
                     <span class="card_top_day">
                      {{ $fav_1->created_at}}
                     </span>
                 </div>
-            </a>
+            </a>    
         </div>
 
         <div class="card_top">
             <a href="{{ route('contents',['id' => $fav_2->post_id]) }}">
                 <div class="card_top_img">
-                    <img src="{{asset('assets/img/test.jpg')}}" />
+                    <img src="{{ asset('assets/img/test.jpg') }}" />
                 </div>
                 <div class="card_top_contents">
                     <h3 class="card_top_title">
+
                     {{ $fav2_doc->title}}
                     </h3>
                     <div class="fav_box">
@@ -54,16 +56,16 @@
                      {{ $fav_2->created_at}}
                     </span>
                 </div>
-            </a>
+            </a>    
         </div>
 
         <div class="card_top">
             <a href="{{ route('contents',['id' => $fav_3->post_id]) }}">
                 <div class="card_top_img">
-                    <img src="{{asset('assets/img/test.jpg')}}" />
+                    <img src="{{ asset('assets/img/test.jpg') }}" />
                 </div>
                 <div class="card_top_contents">
-                    <h3 class="card_top_title">
+                    <h3 class="card_top_title">              
                     {{ $fav3_doc->title}}
                     </h3>
                     <div class="fav_box">
@@ -74,7 +76,7 @@
                      {{ $fav_3->created_at}}
                     </span>
                 </div>
-            </a>
+            </a>    
         </div>
     @endisset
     </div>
@@ -93,7 +95,7 @@
 {{-- ここから投稿内容が表示される部分（新着）--}}
     <div class="card_top_wrapper">
     @isset($documents)
-        @foreach($documents as $document)
+        <!-- @foreach($documents as $document) -->
             <div class="card_top">
               <a href="{{ route('contents',['id' => $document->id]) }}">
                 <div class="card_top_img">
@@ -104,17 +106,21 @@
                     {{ $document->title}}
                     </h3>
                     <div class="category_wrapper">
-                        <h4>{{ $document->school_category }}</h4>
+                        <h4>{{ $document->school_categroy }}</h4>
                         <h4>{{ $document->grade }}</h4>
                         <h4>{{ $document->subject }}</h4>
                     </div>
-                    <span class="card_top_day">
-                    {{ $document->updated_at}}
-                    </span>
+                    <div class="middle_wrapper">
+                        <img class="icon1" src="{{asset('assets/img/like.svg')}}" alt="お気に入り">
+                        <p>{{ $document->like_count}}</p>
+                        <img class="icon2" src="{{asset('assets/img/good.svg')}}" alt="いいね！">
+                        <p>{{ $document->good_count}}</p>
+                    </div>
+                    <div class="card_top_day">{{ $document->updated_at }}</div>                  
                 </div>
                 </a>    
             </div>
-        @endforeach
+        <!-- @endforeach -->
     @endisset
 
     </div>
