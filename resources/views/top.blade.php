@@ -99,7 +99,7 @@
 {{-- ここから投稿内容が表示される部分（新着）--}}
     <div class="card_top_wrapper">
     @isset($documents)
-        <!-- @foreach($documents as $document) -->
+        @foreach($documents as $document)
             <div class="card_top">
                 <a href="{{ route('contents',['id' => $document->id]) }}">
 
@@ -107,7 +107,7 @@
                         <img src="{{ asset('assets/img/test.jpg') }}" />
                     </div> -->
 
-                    <iframe class="samune" src="/pdfjs/web/viewer.html?file={{asset('/storage/'.$file_name)}}#page=1&scrollbar=0&view=Fit&viewrect=0,0,570,0" 
+                    <iframe class="samune" src="../pdfjs/web/viewer.html?file={{asset('/storage/'.$file_name)}}#page=1&scrollbar=0&view=Fit&viewrect=0,0,570,0" 
                         marginwidth="0" marginheight="0" frameborder="no" style="pointer-events:none;" style="border:none;"></iframe>
 
                     <div class="card_top_contents">
@@ -126,12 +126,12 @@
                           <p>{{ $document->good_count}}</p>
                         </div>
                         
-                       <div class="card_top_day">{{ $document->updated_at }}</div>//spanタブかも。。。。
+                       <div class="card_top_day">{{ $document->updated_at }}</div>
                     </div>
 
                 </a>    
             </div>
-        <!-- @endforeach -->
+        @endforeach
     @endisset
 
     </div>
