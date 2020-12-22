@@ -43,9 +43,10 @@ class MakerController extends Controller
     $fav3_doc = Document::where('id',$fov_3_id)->first();
     $fav4_doc = Document::where('id',$fov_4_id)->first();
     $fav5_doc = Document::where('id',$fov_5_id)->first();
-
+    $fav1_doc = Document::where('id',$fov_1_id)->first();
+    echo $documents;
     //viewへ情報を投げる
-    return view('/top',compact('documents','fav_1','fav_2','fav_3','fav_4','fav_5','fav1_doc','fav2_doc','fav3_doc','fav4_doc','fav5_doc'));
+    // return view('/top',compact('documents','fav_1','fav_2','fav_3','fav_4','fav_5','fav1_doc','fav2_doc','fav3_doc','fav4_doc','fav5_doc'));
 
   }
 

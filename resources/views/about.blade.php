@@ -20,7 +20,7 @@
       <p>（仮）スクールハブは、先生方が持つ授業の資料をお互いに共有することで、新たなアイデアを入手し、授業の質を高め、授業準備を効率化することを目的としています。本サービスは、デジタルハリウッド大学が運営する、起業家・エンジニア養成学校「G's Academy Tokyo」の（仮）Team Yamazakiにより作成されました。</p>
 
       <div class="figure">
-        <img src="{{asset('assets/img/about/education3.png')}}" alt="（仮）スクールハブの概要">
+        <img class="about_img" src="{{asset('assets/img/about/education3.png')}}" alt="（仮）スクールハブの概要">
       </div>
 
     </div>
@@ -32,7 +32,7 @@
       <p>学校教育は大きく変わろうとしています。これからの教育は、今までの「知識詰め込み型の教育」から「主題的・対話的で深い学び」が中心に変わり、「知識及び技能の習得」、「思考力・判断力・表現力の育成」、「学びに向かう力・人間性の涵養」が柱になります。</p>
       
       <div class="figure">
-        <img src="{{asset('assets/img/about/education1.png')}}" alt="これからの教育が目指す姿">
+        <img class="about_img" src="{{asset('assets/img/about/education1.png')}}" alt="これからの教育が目指す姿">
       </div>
       
       <p>学ぶ内容と学び方の双方が大きく変わるため、学校の授業と教師の役割も大きく変化します。そして、教師は変化に対応する必要があります。</p>
@@ -40,7 +40,7 @@
       <p>これからは、「思考力・判断力・表現力の育成」と「学びに向かう力・人間性の涵養」をするような授業に注力する必要があります。特に、探究学習やプロジェクト型学習、問題解決学習、STEAM教育、プログラミング学習など、新たな学習を授業に組み込む必要があります。</p>
     
       <p class="figure">
-        <img src="{{asset('assets/img/about/education2.png')}}" alt="これからの教育が目指す姿">
+        <img class="about_img" src="{{asset('assets/img/about/education2.png')}}" alt="これからの教育が目指す姿">
       </p>
 
     </div>
