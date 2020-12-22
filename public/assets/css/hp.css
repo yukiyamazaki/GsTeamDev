@@ -125,6 +125,7 @@ img#logo {
 .menu_second li {
     padding: 20px 150px;
     border: solid 0.5px;
+    text-align: center;
 }
 
 main{
@@ -151,4 +152,8 @@ footer{
     align-items: center;
     justify-content: center;
     background-color:  #adadad;
+}
+
+.menu_time span {
+    color: white;
 }

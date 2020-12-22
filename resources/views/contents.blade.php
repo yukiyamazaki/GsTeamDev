@@ -7,7 +7,7 @@
 
         <div id="pdf_wrapper">
             <div class="pdf_naiyou">
-                <p class="contents_name">{{ $document->title }}</p>
+                <p class="contents_name">タイトル：<span>{{ $document->title }}</span></p>
             </div>
             <iframe id="pdf_file" src="{{asset('/storage/'.$file_name)}}"></iframe>
         </div>
@@ -21,96 +21,33 @@
     </main>
 
     <aside class="contents_aside">
-
+        <p class="recomend_category">ー”<span class="rela_cate">{{ $document->subject }}</span>”科の新着教材ー</p>
+        @isset($relaiton_subjects)
+        @foreach($relaiton_subjects as $relaiton_subject)
         <div class="card-3">
-            <a href="{{ url('/contents') }}">
-
-                <!-- <div class="content-img">
-                    <img src="{{ asset('assets/img/bg1.jpg') }}" />
-                </div> -->
-
+            <a href="{{ route('contents',['id' => $relaiton_subject->id]) }}">
+                <div class="content-img">
                 <iframe class="samune" src="/pdfjs/web/viewer.html?file={{asset('/storage/'.$file_name)}}#page=#page=1&scrollbar=0&view=Fit&viewrect=0,0,570,0" 
                     marginwidth="0" marginheight="0" frameborder="no" style="pointer-events:none;" style="border:none;"></iframe>
 
                 <div class="content">
                     
                     <h3 class="title">
-                        デザイン探しをスマートに。HTML/CSSスニペットまとめ。
+                    {{ $relaiton_subject->title }}
                     </h3>
+                    <div class="fav_box_contents">
+                        <img class="fav_img_contents" src="{{asset('assets/img/fav_heart.svg')}}" alt="">
+                        <span class="fab_img_contents">245</span>
+                    </div>
                     <span class="post-day">
-                        2020年06月27日
+                    {{ $relaiton_subject->created_at }}
                     </span>
                 </div>
             </a>
         </div>
-
-        <div class="card-3">
-
-            <div class="content-img">
-                <img src="{{ asset('assets/img/test.jpg') }}" />
-            </div>
-
-            <div class="content">
-                <h3 class="title">
-                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
-                </h3>
-                <span class="post-day">
-                2020年06月27日
-                </span>
-            </div>
-
-        </div>
-
-        <div class="card-3">
-
-            <div class="content-img">
-                <img src="{{ asset('assets/img/test1.jpg') }}" />
-            </div>
-
-            <div class="content">
-                <h3 class="title">
-                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
-                </h3>
-                <span class="post-day">
-                2020年06月27日
-                </span>
-            </div>
-
-        </div>
-
-        <div class="card-3">
-
-            <div class="content-img">
-                <img src="{{ asset('assets/img/test.jpg') }}" />
-            </div>
-
-            <div class="content">
-                <h3 class="title">
-                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
-                </h3>
-                <span class="post-day">
-                2020年06月27日
-                </span>
-            </div>
-
-        </div>
-
-        <div class="card-3">
-
-            <div class="content-img">
-                <img src="{{ asset('assets/img/test.jpg') }}" />
-            </div>
-
-            <div class="content">
-                <h3 class="title">
-                デザイン探しをスマートに。HTML/CSSスニペットまとめ。
-                </h3>
-                <span class="post-day">
-                2020年06月27日
-                </span>
-            </div>
-
-        </div>
+        @endforeach
+        @endisset
+        
 
     </aside>
 

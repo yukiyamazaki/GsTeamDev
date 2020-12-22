@@ -51,9 +51,13 @@
 }
 
 .figure {
-  width: 80%;
+  width: 100%;
   text-align: center;
   margin: 36px 0;
+}
+
+.about_img {
+  width: 100%;
 }
 
 .about_h3 {
