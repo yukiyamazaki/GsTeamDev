@@ -200,3 +200,19 @@ h4 {
     font-size: 0.4em;
     color: #777;
 }
+
+
+.fav_box {
+    display: block;
+    position: relative;
+    margin-left: 68%;
+}
+
+.fav_img{
+    width: 20px;
+
+}
+
+.fav_box span{
+
+}

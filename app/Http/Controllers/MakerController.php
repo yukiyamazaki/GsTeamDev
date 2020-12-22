@@ -30,8 +30,22 @@ class MakerController extends Controller
     $fav_4 = $documents_sums[3];
     $fav_5 = $documents_sums[4];
 
-    // echo $fav_1;
-    return view('/top',compact('documents','fav_1','fav_2','fav_3','fav_4','fav_5'));
+    //人気上位5位のidからdocument情報を取得
+    $fov_1_id = $fav_1 ->id;
+    $fov_2_id = $fav_2 ->id;
+    $fov_3_id = $fav_3 ->id;
+    $fov_4_id = $fav_4 ->id;
+    $fov_5_id = $fav_5 ->id;
+
+    //取得したIDから各々情報を取得
+    $fav1_doc = Document::where('id',$fov_1_id)->first();
+    $fav2_doc = Document::where('id',$fov_2_id)->first();
+    $fav3_doc = Document::where('id',$fov_3_id)->first();
+    $fav4_doc = Document::where('id',$fov_4_id)->first();
+    $fav5_doc = Document::where('id',$fov_5_id)->first();
+
+    //viewへ情報を投げる
+    return view('/top',compact('documents','fav_1','fav_2','fav_3','fav_4','fav_5','fav1_doc','fav2_doc','fav3_doc','fav4_doc','fav5_doc'));
 
   }
 

@@ -24,9 +24,12 @@
                 </div>
                 <div class="card_top_contents">
                     <h3 class="card_top_title">
-                    {{ $fav_1->title}}
+                    {{ $fav1_doc->title}}
                     </h3>
-                    <h3>{{ $fav_1->likeid_sum}}</h3>
+                    <div class="fav_box">
+                        <img class="fav_img" src="{{asset('assets/img/fav_heart.svg')}}" alt="">
+                        <span>{{ $fav_1->likeid_sum}}</span>
+                    </div>
                     <span class="card_top_day">
                      {{ $fav_1->created_at}}
                     </span>
@@ -41,9 +44,12 @@
                 </div>
                 <div class="card_top_contents">
                     <h3 class="card_top_title">
-                    {{ $fav_2->title}}
+                    {{ $fav2_doc->title}}
                     </h3>
-                    <h3>{{ $fav_2->likeid_sum}}</h3>
+                    <div class="fav_box">
+                        <img class="fav_img" src="{{asset('assets/img/fav_heart.svg')}}" alt="">
+                        <span>{{ $fav_2->likeid_sum}}</span>
+                    </div>
                     <span class="card_top_day">
                      {{ $fav_2->created_at}}
                     </span>
@@ -58,9 +64,12 @@
                 </div>
                 <div class="card_top_contents">
                     <h3 class="card_top_title">
-                    {{ $fav_3->title}}
+                    {{ $fav3_doc->title}}
                     </h3>
-                    <h3>{{ $fav_3->likeid_sum}}</h3>
+                    <div class="fav_box">
+                        <img class="fav_img" src="{{asset('assets/img/fav_heart.svg')}}" alt="">
+                        <span>{{ $fav_3->likeid_sum}}</span>
+                    </div>
                     <span class="card_top_day">
                      {{ $fav_3->created_at}}
                     </span>

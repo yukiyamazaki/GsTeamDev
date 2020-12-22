@@ -22,8 +22,8 @@
 
     <aside class="contents_aside">
         <p class="recomend_category">ー”<span class="rela_cate">{{ $document->subject }}</span>”科の新着教材ー</p>
-    @isset($relaiton_subjects)
-    @foreach($relaiton_subjects as $relaiton_subject)
+        @isset($relaiton_subjects)
+        @foreach($relaiton_subjects as $relaiton_subject)
         <div class="card-3">
             <a href="{{ route('contents',['id' => $relaiton_subject->id]) }}">
                 <div class="content-img">
@@ -41,8 +41,8 @@
                 </div>
             </a>
         </div>
-    @endforeach
-    @endisset
+        @endforeach
+        @endisset
         
 
     </aside>
