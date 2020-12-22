@@ -23,25 +23,17 @@
                 <div class="card_top_img">
                     <img src="{{ asset('assets/img/test.jpg') }}" />
                 </div>
-                <div class="card_top_contents">
+               <div class="card_top_contents">
                     <h3 class="card_top_title">
-                    {{ $fav_1->post_id}}
-                </h3>
-                
-                    <div class="category_wrapper">
-                        <h4>小学校</h4>
-                        <h4>2年</h4>
-                        <h4>国語</h4>
+                    {{ $fav1_doc->title}}
+                    </h3>
+                    <div class="fav_box">
+                        <img class="fav_img" src="{{asset('assets/img/fav_heart.svg')}}" alt="">
+                        <span>{{ $fav_2->likeid_sum}}</span>
                     </div>
-
-                    <div class="middle_wrapper">
-                        <img class="icon1" src="{{asset('assets/img/like.svg')}}" alt="お気に入り">
-                        <p>{{ $fav_1->likeid_sum}}</p>
-                        <img class="icon2" src="{{asset('assets/img/good.svg')}}" alt="いいね！">
-                        <p>237</p>
-                    </div>
-
-                    <div class="card_top_day">{{ $fav_1->updated_at }}</div>                  
+                    <span class="card_top_day">
+                     {{ $fav_1->created_at}}
+                    </span>
                 </div>
             </a>    
         </div>
@@ -53,24 +45,16 @@
                 </div>
                 <div class="card_top_contents">
                     <h3 class="card_top_title">
-                    {{ $fav_2->post_id}}
+
+                    {{ $fav2_doc->title}}
                     </h3>
-
-                    <div class="category_wrapper">
-                        <h4>高校</h4>
-                        <h4>1年</h4>
-                        <h4>歴史</h4>
+                    <div class="fav_box">
+                        <img class="fav_img" src="{{asset('assets/img/fav_heart.svg')}}" alt="">
+                        <span>{{ $fav_2->likeid_sum}}</span>
                     </div>
-
-                    <div class="middle_wrapper">
-                        <img class="icon1" src="{{asset('assets/img/like.svg')}}" alt="お気に入り">
-                        <p>{{ $fav_2->likeid_sum}}</p>
-                        <img class="icon2" src="{{asset('assets/img/good.svg')}}" alt="いいね！">
-                        <p>124</p>
-                    </div>
-                
-
-                    <div class="card_top_day">{{ $fav_2->updated_at }}</div>                  
+                    <span class="card_top_day">
+                     {{ $fav_2->created_at}}
+                    </span>
                 </div>
             </a>    
         </div>
@@ -81,23 +65,16 @@
                     <img src="{{ asset('assets/img/test.jpg') }}" />
                 </div>
                 <div class="card_top_contents">
-                    <h3 class="card_top_title">
-                    {{ $fav_3->post_id}}
+                    <h3 class="card_top_title">              
+                    {{ $fav3_doc->title}}
                     </h3>
-                    
-                        <div class="category_wrapper">
-                            <h4>中学校</h4>
-                            <h4>2年</h4>
-                            <h4>英語</h4>
-                        </div>
-
-                    <div class="middle_wrapper">
-                        <img class="icon1" src="{{asset('assets/img/like.svg')}}" alt="お気に入り">
-                        <p>{{ $fav_3->likeid_sum}}</p>
-                        <img class="icon2" src="{{asset('assets/img/good.svg')}}" alt="いいね！">
-                        <p>126</p>
+                    <div class="fav_box">
+                        <img class="fav_img" src="{{asset('assets/img/fav_heart.svg')}}" alt="">
+                        <span>{{ $fav_3->likeid_sum}}</span>
                     </div>
-                    <div class="card_top_day">{{ $fav_3->updated_at }}</div>                  
+                    <span class="card_top_day">
+                     {{ $fav_3->created_at}}
+                    </span>
                 </div>
             </a>    
         </div>

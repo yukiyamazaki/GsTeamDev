@@ -20,6 +20,7 @@
 .fv_img{
     width: 100%;
 }
+
 /* .fv_text{
     width: 80%;
     margin: 0 auto;
@@ -202,4 +203,20 @@ h4 {
     font-size: 0.4em;
     line-height: 1.5;
     color: #777;
+}
+
+
+.fav_box {
+    display: block;
+    position: relative;
+    margin-left: 68%;
+}
+
+.fav_img{
+    width: 20px;
+
+}
+
+.fav_box span{
+
 }

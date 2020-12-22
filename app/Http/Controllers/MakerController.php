@@ -30,8 +30,23 @@ class MakerController extends Controller
     $fav_4 = $documents_sums[3];
     $fav_5 = $documents_sums[4];
 
-    // echo $fav_1;
-    return view('/top',compact('documents','fav_1','fav_2','fav_3','fav_4','fav_5'));
+    //人気上位5位のidからdocument情報を取得
+    $fov_1_id = $fav_1 ->id;
+    $fov_2_id = $fav_2 ->id;
+    $fov_3_id = $fav_3 ->id;
+    $fov_4_id = $fav_4 ->id;
+    $fov_5_id = $fav_5 ->id;
+
+    //取得したIDから各々情報を取得
+    $fav1_doc = Document::where('id',$fov_1_id)->first();
+    $fav2_doc = Document::where('id',$fov_2_id)->first();
+    $fav3_doc = Document::where('id',$fov_3_id)->first();
+    $fav4_doc = Document::where('id',$fov_4_id)->first();
+    $fav5_doc = Document::where('id',$fov_5_id)->first();
+    $fav1_doc = Document::where('id',$fov_1_id)->first();
+    echo $documents;
+    //viewへ情報を投げる
+    // return view('/top',compact('documents','fav_1','fav_2','fav_3','fav_4','fav_5','fav1_doc','fav2_doc','fav3_doc','fav4_doc','fav5_doc'));
 
      //お気に入りが多い順で上位5件のPostを表示
      $like_num = Like::orderby('likeid_user_id','desc')->limit(5)->get();
@@ -49,14 +64,18 @@ class MakerController extends Controller
     public function contents($id){
       //取得したidを元にdocumentテーブルから資料情報を取得
       $document = Document::where('id',$id)->first();
-
+      //file情報を取得
       $file_type = $document->file_type;
-      // echo $document;
+      $subject = $document->subject;
+
+      //取得したsubjectから関連科目を新着順に取得
+      $relaiton_subjects = Document::orderby('created_at','desc')->where('subject','=',$subject)->limit(4)->get();
+
 
       $file_name =  str_replace('public/','',$file_type);
 
       //file_nameがあれば行ける
-      return view('contents',compact('document','file_name'));
+      return view('contents',compact('document','file_name','relaiton_subjects'));
     }
 
   // 資料投稿ページへの遷移
