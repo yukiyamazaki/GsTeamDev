@@ -66,8 +66,8 @@
   box-shadow: 0 0 1px;
   height: 240px;
   position: relative;
-  background-color: gainsboro;
-  width: 100%;
+  background-color: white;
+    width: 100%;
 }
 
 .fileItem .bottom-container .embed-container .iframe-wrapper .overlay .iframe-msg {
@@ -211,3 +211,4 @@ input[type="button"] {
 .up_logo img{
   width: 40%;
 }
+

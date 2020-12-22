@@ -29,12 +29,11 @@
                     <div class="iframe-wrapper" id="iframe">
                       <div class="overlay">
                         <div class="iframe-msg text-center">
-                        <div class="up_message">
-                          アップロード用のファイルの準備中..
+                        <input type="file" name="file" id="file">
+                          <span class="message"></span>
                         </div>
                         
                           
-                        </div>
                       </div>
                     </div>
 
@@ -114,11 +113,7 @@
                 
 
               <div class="make_file_btn">
-                <input type="file" name="file" id="file" style="display:none;" onchange="$('#fake_input_file').val($(this).val())">
-                          <!-- <span class="message">ファイル選択</span> -->
-                  <input type="button" value="ファイル選択"onClick="$('#file').click();">
                   <button type="submit" class="toukou">投稿</button>
-                
                   <!-- <button type="submit" class="toukou">投稿中..</button> -->
                 </div>
                   <div class="up_logo">
