@@ -1,0 +1,31 @@
+body{
+  background: pink;
+}
+
+.content_box{
+  display: flex;
+
+}
+
+h2{
+  font-size: 20px;
+}
+
+.box{
+  width: 25%;
+  border: 1px solid black;
+}
+
+.new_box{
+  width: 200px;
+  height: 100px;
+  border: black solid 1px;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.heart{
+  display: block;
+  width: 30px;
+  height: 30px;
+}

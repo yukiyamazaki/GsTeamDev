@@ -13,11 +13,12 @@ class CreatePostsTable extends Migration
      */
     public function up()
             {
-                Schema::create("post_table", function (Blueprint $table) {
+                Schema::create("post", function (Blueprint $table) {
 
 						$table->bigIncrements('id');
 						$table->integer('post_user_id');
-						$table->integer('document_id');
+                        $table->integer('document_id');
+                        $table->timestamps();
 
                 });
             }
@@ -29,7 +30,7 @@ class CreatePostsTable extends Migration
              */
             public function down()
             {
-                Schema::dropIfExists("post_table");
+                Schema::dropIfExists("post");
             }
         }
     

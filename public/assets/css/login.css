@@ -1,0 +1,415 @@
+abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, samp, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var, video {
+  border: 0;
+  background: transparent;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+}
+
+div{
+  display: block;
+}
+
+
+body {
+  background: #f3f3f3;
+  font-family: Noto Sans Japanese,ヒラギノ角ゴ Pro W3,Hiragino Kaku Gothic Pro,メイリオ,Meiryo,ＭＳ Ｐゴシック,Osaka,sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #111;
+  width: 100%;
+}
+
+input, select, textarea {
+  vertical-align: middle;
+}
+
+.l-page {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  min-width: 1100px;
+  margin: auto;
+}
+
+/* .l-containers {
+  min-height: 80vh;
+  margin-bottom: 80px;
+  width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+} */
+
+.title_box{
+  display: block;
+  width: 50%;
+  margin: 100px auto 12px auto;
+  text-align: center;
+  font-size: 30px;
+}
+.title{
+
+}
+
+.up-login{
+  width: 540px;
+  background: #fff;
+  overflow: hidden;
+  margin: 23px auto 0;  
+}
+
+.up-login_content {
+  padding: 50px 80px;
+}
+
+.uq-login_logo {
+  width: 140px;
+  margin: 0 auto 40px;
+}
+
+.uq-login_logo img {
+  width: 100%;
+  height: auto;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  background: black;
+  width: 100px;
+  height: 100px;
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+ 
+}
+
+/* ログイン、新規のボタン */
+.uq-login .c-tab_action {
+  margin-bottom: 30px;
+}
+.c-tab_button:last-of-type {
+  border-right: none;
+}
+
+
+.c-tab_action {
+  margin: 0 0 20px;
+  position: relative;
+  z-index: 10;
+  background: #fff;
+}
+
+.c-tab_buttons {
+  display: flex;
+  border: 1px solid #ddd;
+}
+
+.c-tab_button {
+  width: 50%;
+  text-align: center;
+  list-style-type: none;
+  border-right: 1px solid #eee;
+}
+.c-tab_button button{
+  font-size: 16px;
+  display: block;
+  padding: 7px 0;
+  font-weight: 700;
+  color: #999;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  width: 100%;
+}
+
+.c-tab_button button.is-active {
+  color: #fff;
+  background: #333;
+  width: 100%;
+}
+
+
+/* ログイン、新規登録部分 */
+.uq-login_type {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.c-headline--lv4 {
+  display: block;
+  margin: 0 0 15px;
+}
+
+/* ログイン方法の選択部分 */
+.c-form {
+  position: relative;
+}
+
+/* ソーシャル部分 */
+.uq-loginSns{
+  overflow: hidden;
+}
+.uq-loginSns .c-button {
+  margin-bottom: 10px;
+}
+.uq-login_type .c-button {
+  width: 100%;
+  height: auto;
+}
+.c-button a, .c-button button {
+  position: relative;
+  border: none;
+  border-radius: 8px;
+  background: #e98325;
+  display: block;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  border-color: #c46814;
+  text-decoration: none;
+  width: 100%;
+  padding: 14px 54px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  transition-timing-function: cubic-bezier(.215,.61,.355,1);
+  transition-duration: .3s;
+  transition-property: opacity transform height;
+}
+
+.c-button {
+  position: relative;
+  border: none;
+  display: inline-block;
+  box-sizing: border-box;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  margin: 0 auto;
+  transition-timing-function: cubic-bezier(.215,.61,.355,1);
+  transition-duration: .25s;
+  transition-property: all;
+}
+
+/* twitter */
+.uq-loginSns .c-button.is-twitter a {
+  background: #04a2f9;
+}
+/* .uq-loginSns .c-button.is-twitter a span:before {
+  content: "";
+} */
+.uq-loginSns .c-button a {
+  padding-left: 0;
+  padding-right: 0;
+}
+.uq-login_type .c-button a, .uq-login_type .c-button button {
+  width: 100%;
+  display: block;
+  height: auto;
+  line-height: 1.65;
+  font-size: 16px;
+  padding: 14px 64px;
+}
+.uq-loginSns .c-button a span {
+  position: relative;
+  padding-left: 30px;
+}
+/* .uq-loginSns .c-button.is-twitter a span:before {
+  content: "";
+} */
+
+/* LINE,facebook */
+.uq-loginSns .c-button {
+  margin-bottom: 10px;
+}
+
+.uq-login_type .c-button {
+  width: 100%;
+  height: auto;
+}
+
+
+
+/* LINE */
+.uq-loginSns .c-button.is-google a {
+  background: yellow;
+}
+/* .uq-loginSns .c-button.is-line a span:before {
+  content: "";
+} */
+
+/* facebook */
+.uq-loginSns .c-button.is-facebook a {
+  background: #2f5bac;
+}
+
+.uq-loginSns .c-button a {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* .uq-loginSns .c-button.is-facebook a span:before {
+  content: "";
+} */
+.uq-loginSns_description {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* メールアドレスログイン部分 */
+.uq-loginForm_key {
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+.uq-loginForm_value {
+  margin-bottom: 15px;
+}
+
+.c-formText, .c-formText.is-required {
+  background: #fff;
+}
+
+.c-formText {
+  position: relative;
+  border: 3px solid #eee;
+  border-radius: 8px;
+}
+.c-formText input {
+  border: none;
+  background: none;
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 16px;
+  vertical-align: middle;
+  width: 100%;
+  padding: 14px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+:placeholder-shown {
+  color: #bbb;
+}
+
+/* ボタン部分 */
+.c-form_button {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.uq-loginForm .c-form_button {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.uq-loginForm_reset {
+  text-align: right;
+}
+
+.uq-loginForm_reset a {
+  font-size: 12px;
+  color: grey;
+  text-decoration: underline;
+}
+
+.uq-login_type:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.uq-login_type .c-button {
+  width: 100%;
+  height: auto;
+}
+.c-button--blackBorder a, .c-button--blackBorder button {
+  border: 2px solid #333;
+  background: #fff;
+  color: #333;
+}
+
+
+/* 新規登録のBUTTON選択時 */
+.uq-login_type:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+.is-register .uq-loginSns .c-button {
+  width: calc(33.333% - 5px);
+  float: left;
+  margin-right: 7px;
+}
+.uq-loginSns .c-button {
+  margin-bottom: 10px;
+}
+
+.uq-login_type .c-button {
+  width: 100%;
+  height: auto;
+}
+
+.uq-loginSns .c-button a {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.uq-loginSns .c-button a span {
+  position: relative;
+  padding-left: 30px;
+}
+.is-register .uq-loginSns_sub {
+  display: block;
+}
+.uq-loginSns_sub {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.is-register .uq-loginSns .c-button {
+  width: calc(33.333% - 5px);
+  float: left;
+  margin-right: 7px;
+}
+.uq-loginSns .c-button {
+  margin-bottom: 10px;
+}
+.uq-loginSns_sub .c-button {
+  margin: 0;
+  width: calc(50% - 5px);
+}
+.uq-login_type .c-button {
+  width: 100%;
+  height: auto;
+}
+.uq-loginSns .c-button a span {
+  position: relative;
+  padding-left: 30px;
+}
+.is-register .uq-loginSns .c-button:last-child {
+  margin-right: 0;
+}
+.uq-loginSns .c-button {
+  margin-bottom: 10px;
+}
