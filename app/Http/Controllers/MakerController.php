@@ -20,7 +20,7 @@ class MakerController extends Controller
     //documentテーブルのデータを取得（新着順）
     $documents = Document::orderby('created_at','desc')->limit(3)->get();
 
-    $document = Document::where('id',3)->first();
+    $document = Document::where('id',14)->first();
 
     //メイン部分のfile情報を取得
     $file_type = $document->file_type;
@@ -55,8 +55,6 @@ class MakerController extends Controller
   
     //viewへ情報を投げる
     return view('/top',compact('documents','file_name','fav_1','fav_2','fav_3','fav_4','fav_5','fav1_doc','fav2_doc','fav3_doc','fav4_doc','fav5_doc'));
-
-
 
   }
 

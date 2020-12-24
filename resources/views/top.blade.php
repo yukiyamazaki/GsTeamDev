@@ -107,8 +107,6 @@
                         <img src="{{ asset('assets/img/test.jpg') }}" />
                     </div> -->
 
-                   
-
                     <iframe class="samune" src="../pdfjs/web/viewer.html?file={{asset('/storage/'.$file_name)}}#page=1&scrollbar=0&view=Fit&viewrect=0,0,570,0" 
                         marginwidth="0" marginheight="0" frameborder="no" style="pointer-events:none;" style="border:none;"></iframe>
 
@@ -116,17 +114,6 @@
                         <h3 class="card_top_title">
                         {{ $document->title}}
                         </h3>
-                        <div class="category_wrapper">
-                            <h4>{{ $document->school_category }}</h4>
-                            <h4>{{ $document->grade }}</h4>
-                            <h4>{{ $document->subject }}</h4>
-                        </div>
-                        <div class="middle_wrapper">
-                          <img class="icon1" src="{{asset('assets/img/like.svg')}}" alt="お気に入り">
-                          <p>{{ $document->like_count}}</p>
-                          <img class="icon2" src="{{asset('assets/img/good.svg')}}" alt="いいね！">
-                          <p>{{ $document->good_count}}</p>
-                        </div>
                         
                        <div class="card_top_day">{{ $document->updated_at }}</div>
                     </div>
