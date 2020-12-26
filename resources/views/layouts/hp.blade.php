@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/hp.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/top.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/contents.css') }}">
-    <link rel="stylesheet" href="{{asset('assets/css/terms.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/suport.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/about.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/contact.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/upload.css')}}">
@@ -62,7 +62,7 @@
                     <ul class="menu_second">
                         <li><a class="menu_time" href="{{ url('/mypage') }}">マイページへ</a></li>
                         <li><a href="{{ url('/about') }}"><span>About</span></a></li>
-                        <li><a href="{{ url('/suport') }}">サポート</a></li>
+                        <li><a href="{{ url('/suport') }}">利用規約</a></li>
                         <li><a href="{{ url('/contact') }}">問い合わせ</a></li>
                         <li><a href="{{ url('/logout') }}">ログアウト</a></li>
                     </ul>
